@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>security_pro: Fichero Fuente C:/Users/Sebastian/Documents/SecurityPro/security pro/Security pro/lcd_1.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="casa.ico"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">security_pro
+   &#160;<span id="projectnumber">8</span>
+   </div>
+   <div id="projectbrief">documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f396504afdc959660871b003fa10164d.html">Documents</a></li><li class="navelem"><a class="el" href="dir_4ac7287d3f20d8f5bb5c92118c15226e.html">SecurityPro</a></li><li class="navelem"><a class="el" href="dir_6023717f2d981da88b930b65ed6faa14.html">security pro</a></li><li class="navelem"><a class="el" href="dir_5598829ea485e7fd1362dd8c6fc11eea.html">Security pro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lcd_1.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lcd__1_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Estas librerias fueron escritas por mi, dale like.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">Instagram â¥ http://instagram.com/robertelectronica</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Facebook  â¥ https://www.facebook.com/Robertelectronico/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">Youtube   â¥ https://www.youtube.com/channel/UCYze8bs8C1qF6UbV2r4LrAA/videos?view_as=subscriber</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef LCD_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define LCD_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//----------------   LCD</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a603f3dba83104f6cc19649afbc317b08">   11</a></span>&#160;<span class="preprocessor">#define  LCDRS  LATDbits.LATD0</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a03aeae2f2623c2d73647a71a911ded10">   12</a></span>&#160;<span class="preprocessor">#define  LCDRW  LATDbits.LATD1</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a9ca52254c5d5023e7d1c0106f71ddadf">   13</a></span>&#160;<span class="preprocessor">#define  LCDE   LATDbits.LATD2</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a5bb87339a585542f24ad38184415b802">   14</a></span>&#160;<span class="preprocessor">#define  LCD4   LATDbits.LATD4</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a9728d9cf237255ac7d71f78f97f5308e">   15</a></span>&#160;<span class="preprocessor">#define  LCD5   LATDbits.LATD5</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#ae3d0b9106edf650f7e1117959cb81aef">   16</a></span>&#160;<span class="preprocessor">#define  LCD6   LATDbits.LATD6</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a340c494dc298d2808474ff7b1f975533">   17</a></span>&#160;<span class="preprocessor">#define  LCD7   LATDbits.LATD7</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//----------------   LCD</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a9797d536837c1aa5f8b73f1bf3a85dd3">   19</a></span>&#160;<span class="preprocessor">#define  TLCDRS  TRISDbits.TRISD0</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#ad10ed489edc36b8353cd27ec19afa786">   20</a></span>&#160;<span class="preprocessor">#define  TLCDRW  TRISDbits.TRISD1</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a72685ceb829f0bc3609cb04e24aaadb0">   21</a></span>&#160;<span class="preprocessor">#define  TLCDE   TRISDbits.TRISD2</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a761d94fcc68e1ea9d386884298df0465">   22</a></span>&#160;<span class="preprocessor">#define  TLCD4   TRISDbits.TRISD4</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#aea9729b548ba8399715e4cb3d4c23c6c">   23</a></span>&#160;<span class="preprocessor">#define  TLCD5   TRISDbits.TRISD5</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a4d6f7cf45d03f00092334b668a647049">   24</a></span>&#160;<span class="preprocessor">#define  TLCD6   TRISDbits.TRISD6</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a360b752f8b09e07a69a7800e687ac0b7">   25</a></span>&#160;<span class="preprocessor">#define  TLCD7   TRISDbits.TRISD7</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  RS  :   F2</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  RW  :   F3</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  E   :   F4</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//Uncomment this if LCD 4 bit interface is used</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//******************************************</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a4e4862889bb85c32e8502147b32dbaf0">   34</a></span>&#160;<span class="preprocessor">#define LCD_4bit</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//***********************************************</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a3b38de74c362be1781fef1136aa9684c">   37</a></span>&#160;<span class="preprocessor">#define LCD_CGRAM           6   //DB6: set CG RAM address</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#ae54acf3ccc45b7d6be334a03627740c6">   38</a></span>&#160;<span class="preprocessor">#define LCD_DDRAM           7   //DB7: set DD RAM address</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * Function set</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * RS R/W DB7 DB6 DB5 DB4 DB3 DB2 DB1 DB0</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> *  0   0   0   0   1   DL  N   F   ?   ?</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> *  (DL) data length                DL=1: 8 bits,   DL=0: 4 bits</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> *  (N)  number of display lines    N=1:  2 lines,   N=0: 1 line</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> *  (F)  character font             F=1:  5x10 dots, F=0: 5x8 dots</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a836094f0d28f0cafae208f8d5cdb1963">   48</a></span>&#160;<span class="preprocessor">#define  SETLCD_4BITS_2LINE     0b00101000</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> * Display  on/off</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> * RS R/W DB7 DB6 DB5 DB4 DB3 DB2 DB1 DB0</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> *  0   0   0   0   0   0   1   D   C   B</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> *  Sets entire Display on/off              (D).</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> *  Cursor on/off                           (C).</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> *  Blinking of cursor position character   (B).</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a3db74efbe6dc25e4662ac4889e95f805">   57</a></span>&#160;<span class="preprocessor">#define  DISPLAY_ALL_ON             0b00001111</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#af9eb9636addab8dd30be08f037aa4df3">   58</a></span>&#160;<span class="preprocessor">#define  DISPLAY_ON_D_OFF_CB        0b00001100</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#ac29aaebef46f5194ae663e8eba18f84c">   59</a></span>&#160;<span class="preprocessor">#define  DISPLAY_ON_D_ON_C_OFF_B    0b00001110</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a308cf2d537225db1fa76466a2db08b7a">   60</a></span>&#160;<span class="preprocessor">#define  DISPLAY_ON_D_OFF_C_ON_B    0b00001101</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * Entry mode set</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * Sets cursor move direction and specifies display shift.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> * These operations are performed during data write and read.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * RS R/W DB7 DB6 DB5 DB4 DB3 DB2 DB1 DB0</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> *  0   0   0   0   0   0   0   1  I/D  S</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> *  I/D=1   : Increment</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> *  I/D=0   : Decrement</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"> *  S=1 : Accompanies display shift</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a9bbfbb655dbd815a84b2a30eb5f9a7ec">   71</a></span>&#160;<span class="preprocessor">#define  EMS_INC_S          0b00000110</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> * Cursor or display shift</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> * Moves cursor and shifts display without changing DDRAM contents.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * RS R/W DB7 DB6 DB5 DB4 DB3 DB2 DB1 DB0</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    0   0   0   0   0   1  S/C R/L  ?   ?</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    S/C=1: Display shift            S/C=0: Cursor move</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    R/L=1: Shift to the right       R/L=0: Shift to the left</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a1bc0064ea5359505d5e1413d84bb658a">   80</a></span>&#160;<span class="preprocessor">#define DISP_MOVE_RIGHT     0b00011100</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#ae841f9860bae2525319a99d2262d7e5f">   81</a></span>&#160;<span class="preprocessor">#define DISP_MOVE_LEFT      0b00011000</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a1dc04430c77a01c81a143620f80ae6a0">   82</a></span>&#160;<span class="preprocessor">#define CURSOR_MOVE_RIGHT   0b00010100</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a5da862e331f6ad3e7bed58980391bf0b">   83</a></span>&#160;<span class="preprocessor">#define CURSOR_MOVE_LEFT    0b00010000</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> * Set  DDRAM</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> * RS R/W DB7 DB6 DB5 DB4 DB3 DB2 DB1 DB0</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> *  0   0   1  ADD ADD ADD ADD ADD ADD ADD</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#aee2112f798cd153de3afb905653ca987">   89</a></span>&#160;<span class="preprocessor">#define LCD_LINE0_DDRAMADDR     0x00</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#ad965b49ee7837b0d99bbd5b5e2f83454">   90</a></span>&#160;<span class="preprocessor">#define LCD_LINE1_DDRAMADDR     0x40</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#afacc9e73df471c77c004606efe6e3ffe">   91</a></span>&#160;<span class="preprocessor">#define LCD_LINE2_DDRAMADDR     0x14</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a8f667a445505409602337d961a995127">   92</a></span>&#160;<span class="preprocessor">#define LCD_LINE3_DDRAMADDR     0x54</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/*******************************************************************/</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a132a90af728916a595bcf5a52cfac21c">   94</a></span>&#160;<span class="preprocessor">#define  RETURN_HOME        0b00000010</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a221b02b65527a670a158a9b1387e877c">   95</a></span>&#160;<span class="preprocessor">#define  CLEAR_DISPLAY      0b00000001</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/********************************************************************/</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#aab5c84a99d7c0fc052115cabb90bbe43">LCD_putc</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);               <span class="comment">//forms data ready to send to 74HC164</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#a23d2c2799194251545c2b8a04534d028">LCD_command</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);                <span class="comment">//forms data ready to send to 74HC164</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#a301a0b73016a44e015dbd374c08243d4">LCD_init</a>(<span class="keywordtype">void</span>);                                <span class="comment">//Initializes LCD</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#a38a1b243dd364e22f42a30d951b60196">LCD_puts</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);   <span class="comment">//Outputs string to LCD</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#ac4f1888faa4e8c44deb3a9fa7be9b764">LCD_gotoxy</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);  <span class="comment">//Cursor to X Y position</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a69c7e132b4cd864d6ec00f171058e98e">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#a69c7e132b4cd864d6ec00f171058e98e">write_CGRAM</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a535f0c25328179c5dd93b22edf4c3cad">  104</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#a535f0c25328179c5dd93b22edf4c3cad">LCDdefinechar</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="lcd__1_8h.html#a4228e2aa5b1c86034d4e21af6bc79dc7">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#a4228e2aa5b1c86034d4e21af6bc79dc7">LCDsend_var</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lcd__1_8h.html#ab3d3c08a4027d3e918914c1562ced027">LCD_clear</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* LCD_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alcd__1_8h_html_a535f0c25328179c5dd93b22edf4c3cad"><div class="ttname"><a href="lcd__1_8h.html#a535f0c25328179c5dd93b22edf4c3cad">LCDdefinechar</a></div><div class="ttdeci">void LCDdefinechar(unsigned char *, unsigned char)</div></div>
+<div class="ttc" id="alcd__1_8h_html_aab5c84a99d7c0fc052115cabb90bbe43"><div class="ttname"><a href="lcd__1_8h.html#aab5c84a99d7c0fc052115cabb90bbe43">LCD_putc</a></div><div class="ttdeci">void LCD_putc(unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00011">lcd.c:11</a></div></div>
+<div class="ttc" id="alcd__1_8h_html_a301a0b73016a44e015dbd374c08243d4"><div class="ttname"><a href="lcd__1_8h.html#a301a0b73016a44e015dbd374c08243d4">LCD_init</a></div><div class="ttdeci">void LCD_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00124">lcd.c:124</a></div></div>
+<div class="ttc" id="alcd__1_8h_html_a38a1b243dd364e22f42a30d951b60196"><div class="ttname"><a href="lcd__1_8h.html#a38a1b243dd364e22f42a30d951b60196">LCD_puts</a></div><div class="ttdeci">void LCD_puts(unsigned char *, unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00164">lcd.c:164</a></div></div>
+<div class="ttc" id="alcd__1_8h_html_a23d2c2799194251545c2b8a04534d028"><div class="ttname"><a href="lcd__1_8h.html#a23d2c2799194251545c2b8a04534d028">LCD_command</a></div><div class="ttdeci">void LCD_command(unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00067">lcd.c:67</a></div></div>
+<div class="ttc" id="alcd__1_8h_html_a4228e2aa5b1c86034d4e21af6bc79dc7"><div class="ttname"><a href="lcd__1_8h.html#a4228e2aa5b1c86034d4e21af6bc79dc7">LCDsend_var</a></div><div class="ttdeci">void LCDsend_var(unsigned int)</div></div>
+<div class="ttc" id="alcd__1_8h_html_a69c7e132b4cd864d6ec00f171058e98e"><div class="ttname"><a href="lcd__1_8h.html#a69c7e132b4cd864d6ec00f171058e98e">write_CGRAM</a></div><div class="ttdeci">void write_CGRAM(const unsigned char *, unsigned char)</div></div>
+<div class="ttc" id="alcd__1_8h_html_ac4f1888faa4e8c44deb3a9fa7be9b764"><div class="ttname"><a href="lcd__1_8h.html#ac4f1888faa4e8c44deb3a9fa7be9b764">LCD_gotoxy</a></div><div class="ttdeci">void LCD_gotoxy(unsigned char, unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00172">lcd.c:172</a></div></div>
+<div class="ttc" id="alcd__1_8h_html_ab3d3c08a4027d3e918914c1562ced027"><div class="ttname"><a href="lcd__1_8h.html#ab3d3c08a4027d3e918914c1562ced027">LCD_clear</a></div><div class="ttdeci">void LCD_clear(void)</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00197">lcd.c:197</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

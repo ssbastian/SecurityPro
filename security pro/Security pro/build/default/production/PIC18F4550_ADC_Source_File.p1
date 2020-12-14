@@ -678,43 +678,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;PIC18F4550_ADC_Source_File.c: 17: }
 [e :UE 367 ]
 }
-"19
-[; ;PIC18F4550_ADC_Source_File.c: 19: int ADC_Read(int channel)
+"22
+[; ;PIC18F4550_ADC_Source_File.c: 22: int ADC_Read(int channel)
 [v _ADC_Read `(i ~T0 @X0 1 ef1`i ]
-"20
-[; ;PIC18F4550_ADC_Source_File.c: 20: {
+"23
+[; ;PIC18F4550_ADC_Source_File.c: 23: {
 {
 [e :U _ADC_Read ]
-"19
-[; ;PIC18F4550_ADC_Source_File.c: 19: int ADC_Read(int channel)
-[v _channel `i ~T0 @X0 1 r1 ]
-"20
-[; ;PIC18F4550_ADC_Source_File.c: 20: {
-[f ]
-"21
-[; ;PIC18F4550_ADC_Source_File.c: 21:     int digital;
-[v _digital `i ~T0 @X0 1 a ]
 "22
-[; ;PIC18F4550_ADC_Source_File.c: 22:     ADCON0 =(ADCON0 & 0b11000011)|((channel<<2) & 0b00111100);
-[e = _ADCON0 -> | & -> _ADCON0 `i -> 195 `i & << _channel -> 2 `i -> 60 `i `uc ]
+[; ;PIC18F4550_ADC_Source_File.c: 22: int ADC_Read(int channel)
+[v _channel `i ~T0 @X0 1 r1 ]
+"23
+[; ;PIC18F4550_ADC_Source_File.c: 23: {
+[f ]
 "24
-[; ;PIC18F4550_ADC_Source_File.c: 24:     ADCON0 |= ((1<<ADON)|(1<<GO));
-[e =| _ADCON0 -> | << -> 1 `i -> _ADON `i << -> 1 `i -> _GO `i `Vuc ]
+[; ;PIC18F4550_ADC_Source_File.c: 24:     int digital;
+[v _digital `i ~T0 @X0 1 a ]
 "25
-[; ;PIC18F4550_ADC_Source_File.c: 25:     while(ADCON0bits.GO_nDONE==1);
+[; ;PIC18F4550_ADC_Source_File.c: 25:     ADCON0 =(ADCON0 & 0b11000011)|((channel<<2) & 0b00111100);
+[e = _ADCON0 -> | & -> _ADCON0 `i -> 195 `i & << _channel -> 2 `i -> 60 `i `uc ]
+"27
+[; ;PIC18F4550_ADC_Source_File.c: 27:     ADCON0 |= ((1<<ADON)|(1<<GO));
+[e =| _ADCON0 -> | << -> 1 `i -> _ADON `i << -> 1 `i -> _GO `i `Vuc ]
+"28
+[; ;PIC18F4550_ADC_Source_File.c: 28:     while(ADCON0bits.GO_nDONE==1);
 [e $U 369  ]
 [e :U 370 ]
 [e :U 369 ]
 [e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 370  ]
 [e :U 371 ]
-"26
-[; ;PIC18F4550_ADC_Source_File.c: 26:     digital = (ADRESH*256) | (ADRESL);
+"29
+[; ;PIC18F4550_ADC_Source_File.c: 29:     digital = (ADRESH*256) | (ADRESL);
 [e = _digital | * -> _ADRESH `i -> 256 `i -> _ADRESL `i ]
-"27
-[; ;PIC18F4550_ADC_Source_File.c: 27:     return(digital);
+"30
+[; ;PIC18F4550_ADC_Source_File.c: 30:     return(digital);
 [e ) _digital ]
 [e $UE 368  ]
-"28
-[; ;PIC18F4550_ADC_Source_File.c: 28: }
+"31
+[; ;PIC18F4550_ADC_Source_File.c: 31: }
 [e :UE 368 ]
 }

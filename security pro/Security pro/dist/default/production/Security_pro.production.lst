@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Sun Dec 13 22:24:40 2020
+                                                                                               Sun Dec 13 23:39:52 2020
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F4550
@@ -878,7 +878,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    864 ;;
    865 ;; *************** function _main *****************
    866 ;; Defined at:
-   867 ;;		line 113 in file "Controler.c"
+   867 ;;		line 116 in file "Controler.c"
    868 ;; Parameters:    Size  Location     Type
    869 ;;		None
    870 ;; Auto vars:     Size  Location     Type
@@ -934,13 +934,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    920  000B2C                     _main:
    921                           	callstack 23
    922  000B2C                     
-   923                           ;Controler.c: 118:     char AM_PM = 0x05;
+   923                           ;Controler.c: 121:     char AM_PM = 0x05;
    924  000B2C  0E05               	movlw	5
    925  000B2E  0100               	movlb	0	; () banked
    926  000B30  6F96               	movwf	main@AM_PM& (0+255),b
    927  000B32                     
    928                           ; BSR set to: 0
-   929                           ;Controler.c: 119:     char days[7] = {'S','M','T','W','t','F','s'};
+   929                           ;Controler.c: 122:     char days[7] = {'S','M','T','W','t','F','s'};
    930  000B32  EE20  F0B9         	lfsr	2,main@F3747
    931  000B36  EE10  F08E         	lfsr	1,main@days
    932  000B3A  0E06               	movlw	6
@@ -950,61 +950,61 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    936  000B42  E2FC               	bc	u2051
    937  000B44                     
    938                           ; BSR set to: 0
-   939                           ;Controler.c: 121:     char i;;Controler.c: 122:     OSCCON = 0x72;
+   939                           ;Controler.c: 124:     char i;;Controler.c: 125:     OSCCON = 0x72;
    940  000B44  0E72               	movlw	114
    941  000B46  6ED3               	movwf	211,c	;volatile
    942  000B48                     
    943                           ; BSR set to: 0
-   944                           ;Controler.c: 123:     LCD_Init();
+   944                           ;Controler.c: 126:     LCD_Init();
    945  000B48  EC60  F00C         	call	_LCD_Init	;wreg free
    946  000B4C                     
-   947                           ;Controler.c: 124:     ADC_Init();
+   947                           ;Controler.c: 127:     ADC_Init();
    948  000B4C  ECBF  F00D         	call	_ADC_Init	;wreg free
    949  000B50                     
-   950                           ;Controler.c: 127:     I2C_Init();
+   950                           ;Controler.c: 130:     I2C_Init();
    951  000B50  ECB2  F00D         	call	_I2C_Init	;wreg free
    952  000B54                     
-   953                           ;Controler.c: 132:     TRISCbits.RC6 = 0;
+   953                           ;Controler.c: 135:     TRISCbits.RC6 = 0;
    954  000B54  9C94               	bcf	148,6,c	;volatile
    955  000B56                     
-   956                           ;Controler.c: 133:     TXSTAbits.TX9 = 0;
+   956                           ;Controler.c: 136:     TXSTAbits.TX9 = 0;
    957  000B56  9CAC               	bcf	172,6,c	;volatile
    958  000B58                     
-   959                           ;Controler.c: 134:     TXSTAbits.TXEN = 1;
+   959                           ;Controler.c: 137:     TXSTAbits.TXEN = 1;
    960  000B58  8AAC               	bsf	172,5,c	;volatile
    961  000B5A                     
-   962                           ;Controler.c: 135:     TXSTAbits.SYNC = 0;
+   962                           ;Controler.c: 138:     TXSTAbits.SYNC = 0;
    963  000B5A  98AC               	bcf	172,4,c	;volatile
    964  000B5C                     
-   965                           ;Controler.c: 136:     TXSTAbits.BRGH = 0;
+   965                           ;Controler.c: 139:     TXSTAbits.BRGH = 0;
    966  000B5C  94AC               	bcf	172,2,c	;volatile
    967  000B5E                     
-   968                           ;Controler.c: 137:     BAUDCONbits.BRG16 = 0;
+   968                           ;Controler.c: 140:     BAUDCONbits.BRG16 = 0;
    969  000B5E  96B8               	bcf	184,3,c	;volatile
    970  000B60                     
-   971                           ;Controler.c: 138:     RCSTAbits.SPEN = 1;
+   971                           ;Controler.c: 141:     RCSTAbits.SPEN = 1;
    972  000B60  8EAB               	bsf	171,7,c	;volatile
    973  000B62                     
-   974                           ;Controler.c: 139:     SPBRG = (unsigned char) (((8000000L / 9600) / 64) - 1);
+   974                           ;Controler.c: 142:     SPBRG = (unsigned char) (((8000000L / 9600) / 64) - 1);
    975  000B62  0E0C               	movlw	12
    976  000B64  6EAF               	movwf	175,c	;volatile
    977  000B66                     
-   978                           ;Controler.c: 152:          ADCON1bits.PCFG=0xff;
+   978                           ;Controler.c: 155:          ADCON1bits.PCFG=0xff;
    979  000B66  0E0F               	movlw	15
    980  000B68  12C1               	iorwf	193,f,c	;volatile
    981  000B6A                     
-   982                           ;Controler.c: 153:          TRISAbits.RA1 = 1;
+   982                           ;Controler.c: 156:          TRISAbits.RA1 = 1;
    983  000B6A  8292               	bsf	146,1,c	;volatile
    984  000B6C                     
-   985                           ;Controler.c: 154:          LATA=0X00;
+   985                           ;Controler.c: 157:          LATA=0X00;
    986  000B6C  0E00               	movlw	0
    987  000B6E  6E89               	movwf	137,c	;volatile
    988  000B70                     
-   989                           ;Controler.c: 155:          TRISA=0X11;
+   989                           ;Controler.c: 158:          TRISA=0X11;
    990  000B70  0E11               	movlw	17
    991  000B72  6E92               	movwf	146,c	;volatile
    992  000B74                     
-   993                           ;Controler.c: 157:     int flag = PORTAbits.RA1;
+   993                           ;Controler.c: 160:     int flag = PORTAbits.RA1;
    994  000B74  B280               	btfsc	128,1,c	;volatile
    995  000B76  EFBF  F005         	goto	u2061
    996  000B7A  EFC3  F005         	goto	u2060
@@ -1021,22 +1021,22 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1007  000B8E  6B98               	clrf	(main@flag+1)& (0+255),b
   1008  000B90                     l2862:
   1009                           
-  1010                           ;Controler.c: 160:          ADCON1bits.PCFG=0xff;
+  1010                           ;Controler.c: 163:          ADCON1bits.PCFG=0xff;
   1011  000B90  0E0F               	movlw	15
   1012  000B92  12C1               	iorwf	193,f,c	;volatile
   1013  000B94                     
-  1014                           ;Controler.c: 161:          TRISAbits.RA1 = 1;
+  1014                           ;Controler.c: 164:          TRISAbits.RA1 = 1;
   1015  000B94  8292               	bsf	146,1,c	;volatile
   1016  000B96                     
-  1017                           ;Controler.c: 162:          LATA=0X00;
+  1017                           ;Controler.c: 165:          LATA=0X00;
   1018  000B96  0E00               	movlw	0
   1019  000B98  6E89               	movwf	137,c	;volatile
   1020  000B9A                     
-  1021                           ;Controler.c: 163:          TRISA=0X11;
+  1021                           ;Controler.c: 166:          TRISA=0X11;
   1022  000B9A  0E11               	movlw	17
   1023  000B9C  6E92               	movwf	146,c	;volatile
   1024  000B9E                     
-  1025                           ;Controler.c: 166:         estado_alarma = PORTAbits.RA1;
+  1025                           ;Controler.c: 169:         estado_alarma = PORTAbits.RA1;
   1026  000B9E  B280               	btfsc	128,1,c	;volatile
   1027  000BA0  EFD4  F005         	goto	u2071
   1028  000BA4  EFD8  F005         	goto	u2070
@@ -1053,7 +1053,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1039  000BB8  6BC1               	clrf	(_estado_alarma+1)& (0+255),b
   1040  000BBA                     
   1041                           ; BSR set to: 0
-  1042                           ;Controler.c: 168:              if(estado_alarma == 1){
+  1042                           ;Controler.c: 171:              if(estado_alarma == 1){
   1043  000BBA  05C0               	decf	_estado_alarma& (0+255),w,b
   1044  000BBC  11C1               	iorwf	(_estado_alarma+1)& (0+255),w,b
   1045  000BBE  A4D8               	btfss	status,2,c
@@ -1064,7 +1064,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1050  000BCC                     u2080:
   1051  000BCC                     
   1052                           ; BSR set to: 0
-  1053                           ;Controler.c: 169:                  if(flag == 1)
+  1053                           ;Controler.c: 172:                  if(flag == 1)
   1054  000BCC  0597               	decf	main@flag& (0+255),w,b
   1055  000BCE  1198               	iorwf	(main@flag+1)& (0+255),w,b
   1056  000BD0  A4D8               	btfss	status,2,c
@@ -1075,11 +1075,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1061  000BDE                     u2090:
   1062  000BDE                     
   1063                           ; BSR set to: 0
-  1064                           ;Controler.c: 170:                   ActivateAlarm();
+  1064                           ;Controler.c: 173:                   ActivateAlarm();
   1065  000BDE  ECF7  F00B         	call	_ActivateAlarm	;wreg free
   1066  000BE2                     l2878:
   1067                           
-  1068                           ;Controler.c: 171:                   flag = 0;
+  1068                           ;Controler.c: 174:                   flag = 0;
   1069  000BE2  0E00               	movlw	0
   1070  000BE4  0100               	movlb	0	; () banked
   1071  000BE6  6F98               	movwf	(main@flag+1)& (0+255),b
@@ -1087,21 +1087,21 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1073  000BEA  6F97               	movwf	main@flag& (0+255),b
   1074  000BEC                     
   1075                           ; BSR set to: 0
-  1076                           ;Controler.c: 175:            RTC_Read_Clock(0);
+  1076                           ;Controler.c: 178:            RTC_Read_Clock(0);
   1077  000BEC  0E00               	movlw	0
   1078  000BEE  EC1B  F00C         	call	_RTC_Read_Clock
   1079  000BF2                     
-  1080                           ;Controler.c: 176:         I2C_Stop();
+  1080                           ;Controler.c: 179:         I2C_Stop();
   1081  000BF2  ECD6  F00D         	call	_I2C_Stop	;wreg free
   1082  000BF6                     
-  1083                           ;Controler.c: 177:         MSdelay(500);
+  1083                           ;Controler.c: 180:         MSdelay(500);
   1084  000BF6  0E01               	movlw	1
   1085  000BF8  6E02               	movwf	(MSdelay@val+1)^0,c
   1086  000BFA  0EF4               	movlw	244
   1087  000BFC  6E01               	movwf	MSdelay@val^0,c
   1088  000BFE  ECD2  F00B         	call	_MSdelay	;wreg free
   1089  000C02                     
-  1090                           ;Controler.c: 180:             hour = hour & (0x3f);
+  1090                           ;Controler.c: 183:             hour = hour & (0x3f);
   1091  000C02  0E3F               	movlw	63
   1092  000C04  0100               	movlb	0	; () banked
   1093  000C06  15E5               	andwf	_hour& (0+255),w,b
@@ -1109,7 +1109,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1095  000C0A  6BE6               	clrf	(_hour+1)& (0+255),b
   1096  000C0C                     
   1097                           ; BSR set to: 0
-  1098                           ;Controler.c: 181:             sprintf(secs,"%x ",sec);
+  1098                           ;Controler.c: 184:             sprintf(secs,"%x ",sec);
   1099  000C0C  0E70               	movlw	low main@secs
   1100  000C0E  6F60               	movwf	sprintf@s& (0+255),b
   1101  000C10  0E00               	movlw	high main@secs
@@ -1122,7 +1122,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1108  000C20  C0EA  F065         	movff	_sec+1,?_sprintf+5
   1109  000C24  ECA9  F00B         	call	_sprintf	;wreg free
   1110  000C28                     
-  1111                           ;Controler.c: 182:             sprintf(mins,"%x:",min);
+  1111                           ;Controler.c: 185:             sprintf(mins,"%x:",min);
   1112  000C28  0E7A               	movlw	low main@mins
   1113  000C2A  0100               	movlb	0	; () banked
   1114  000C2C  6F60               	movwf	sprintf@s& (0+255),b
@@ -1136,7 +1136,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1122  000C3E  C0E8  F065         	movff	_min+1,?_sprintf+5
   1123  000C42  ECA9  F00B         	call	_sprintf	;wreg free
   1124  000C46                     
-  1125                           ;Controler.c: 183:             sprintf(hours,"%x",hour);
+  1125                           ;Controler.c: 186:             sprintf(hours,"%x",hour);
   1126  000C46  0E84               	movlw	low main@hours
   1127  000C48  0100               	movlb	0	; () banked
   1128  000C4A  6F60               	movwf	sprintf@s& (0+255),b
@@ -1150,27 +1150,27 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1136  000C5C  C0E6  F065         	movff	_hour+1,?_sprintf+5
   1137  000C60  ECA9  F00B         	call	_sprintf	;wreg free
   1138  000C64                     
-  1139                           ;Controler.c: 187:             RTC_Read_Calendar(3);
+  1139                           ;Controler.c: 190:             RTC_Read_Calendar(3);
   1140  000C64  0E03               	movlw	3
   1141  000C66  EC7C  F00B         	call	_RTC_Read_Calendar
   1142  000C6A                     
-  1143                           ;Controler.c: 188:             I2C_Stop();
+  1143                           ;Controler.c: 191:             I2C_Stop();
   1144  000C6A  ECD6  F00D         	call	_I2C_Stop	;wreg free
   1145                           
-  1146                           ;Controler.c: 191:         switch(days[Day])
+  1146                           ;Controler.c: 194:         switch(days[Day])
   1147  000C6E  EFB6  F006         	goto	l2944
   1148  000C72                     l2898:
   1149                           
   1150                           ; BSR set to: 0
-  1151                           ;Controler.c: 195:                         protocoloFDS();
+  1151                           ;Controler.c: 198:                         protocoloFDS();
   1152  000C72  EC9D  F008         	call	_protocoloFDS	;wreg free
   1153                           
-  1154                           ;Controler.c: 196:                        break;
+  1154                           ;Controler.c: 199:                        break;
   1155  000C76  EFC8  F005         	goto	l2862
   1156  000C7A                     l2900:
   1157                           
   1158                           ; BSR set to: 0
-  1159                           ;Controler.c: 199:                 if(hour >= 0 && hour <= 19){
+  1159                           ;Controler.c: 202:                 if(hour >= 0 && hour <= 19){
   1160  000C7A  BFE6               	btfsc	(_hour+1)& (0+255),7,b
   1161  000C7C  EF42  F006         	goto	u2101
   1162  000C80  EF44  F006         	goto	u2100
@@ -1194,21 +1194,21 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1180  000CA4                     l2904:
   1181                           
   1182                           ; BSR set to: 0
-  1183                           ;Controler.c: 202:                     protocoloProtocoloDia();
+  1183                           ;Controler.c: 205:                     protocoloProtocoloDia();
   1184  000CA4  EC5D  F009         	call	_protocoloProtocoloDia	;wreg free
   1185                           
-  1186                           ;Controler.c: 203:                 }else{
+  1186                           ;Controler.c: 206:                 }else{
   1187  000CA8  EFC8  F005         	goto	l2862
   1188  000CAC                     l2906:
   1189                           
   1190                           ; BSR set to: 0
-  1191                           ;Controler.c: 205:                     protocoloNoche();
+  1191                           ;Controler.c: 208:                     protocoloNoche();
   1192  000CAC  ECDD  F007         	call	_protocoloNoche	;wreg free
   1193  000CB0  EFC8  F005         	goto	l2862
   1194  000CB4                     l2908:
   1195                           
   1196                           ; BSR set to: 0
-  1197                           ;Controler.c: 210:                 if(hour >= 0 && hour <= 19){
+  1197                           ;Controler.c: 213:                 if(hour >= 0 && hour <= 19){
   1198  000CB4  BFE6               	btfsc	(_hour+1)& (0+255),7,b
   1199  000CB6  EF5F  F006         	goto	u2121
   1200  000CBA  EF61  F006         	goto	u2120
@@ -1233,7 +1233,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1219  000CE2                     l2916:
   1220                           
   1221                           ; BSR set to: 0
-  1222                           ;Controler.c: 221:                 if(hour >= 0 && hour <= 19){
+  1222                           ;Controler.c: 224:                 if(hour >= 0 && hour <= 19){
   1223  000CE2  BFE6               	btfsc	(_hour+1)& (0+255),7,b
   1224  000CE4  EF76  F006         	goto	u2141
   1225  000CE8  EF78  F006         	goto	u2140
@@ -1258,7 +1258,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1244  000D10                     l2924:
   1245                           
   1246                           ; BSR set to: 0
-  1247                           ;Controler.c: 232:                 if(hour >= 0 && hour <= 19){
+  1247                           ;Controler.c: 235:                 if(hour >= 0 && hour <= 19){
   1248  000D10  BFE6               	btfsc	(_hour+1)& (0+255),7,b
   1249  000D12  EF8D  F006         	goto	u2161
   1250  000D16  EF8F  F006         	goto	u2160
@@ -1283,7 +1283,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1269  000D3E                     l2932:
   1270                           
   1271                           ; BSR set to: 0
-  1272                           ;Controler.c: 243:                 if(hour >= 0 && hour <= 19){
+  1272                           ;Controler.c: 246:                 if(hour >= 0 && hour <= 19){
   1273  000D3E  BFE6               	btfsc	(_hour+1)& (0+255),7,b
   1274  000D40  EFA4  F006         	goto	u2181
   1275  000D44  EFA6  F006         	goto	u2180
@@ -1365,13 +1365,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1350  000DCC                     l2946:
   1351                           
   1352                           ; BSR set to: 0
-  1353                           ;Controler.c: 262:           desactivarAlarm();
+  1353                           ;Controler.c: 265:           desactivarAlarm();
   1354  000DCC  EC6F  F00D         	call	_desactivarAlarm	;wreg free
   1355  000DD0                     
-  1356                           ;Controler.c: 264:            LCD_Clear();
+  1356                           ;Controler.c: 267:            LCD_Clear();
   1357  000DD0  ECF4  F00D         	call	_LCD_Clear	;wreg free
   1358  000DD4                     
-  1359                           ;Controler.c: 265:            flag = 1;
+  1359                           ;Controler.c: 268:            flag = 1;
   1360  000DD4  0E00               	movlw	0
   1361  000DD6  0100               	movlb	0	; () banked
   1362  000DD8  6F98               	movwf	(main@flag+1)& (0+255),b
@@ -3083,7 +3083,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3002                           
   3003 ;; *************** function _protocoloProtocoloDia *****************
   3004 ;; Defined at:
-  3005 ;;		line 478 in file "Controler.c"
+  3005 ;;		line 500 in file "Controler.c"
   3006 ;; Parameters:    Size  Location     Type
   3007 ;;		None
   3008 ;; Auto vars:     Size  Location     Type
@@ -3117,38 +3117,38 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3036  0012BA                     _protocoloProtocoloDia:
   3037                           	callstack 26
   3038  0012BA                     
-  3039                           ;Controler.c: 479:     ADCON1 = 0x0F;
+  3039                           ;Controler.c: 501:     ADCON1 = 0x0F;
   3040  0012BA  0E0F               	movlw	15
   3041  0012BC  6EC1               	movwf	193,c	;volatile
   3042  0012BE                     
-  3043                           ;Controler.c: 480:     TRISAbits.RA2 = 1;
+  3043                           ;Controler.c: 502:     TRISAbits.RA2 = 1;
   3044  0012BE  8492               	bsf	146,2,c	;volatile
   3045  0012C0                     
-  3046                           ;Controler.c: 481:     TRISAbits.RA3 = 1;
+  3046                           ;Controler.c: 503:     TRISAbits.RA3 = 1;
   3047  0012C0  8692               	bsf	146,3,c	;volatile
   3048  0012C2                     
-  3049                           ;Controler.c: 482:     TRISAbits.RA4 = 1;
+  3049                           ;Controler.c: 504:     TRISAbits.RA4 = 1;
   3050  0012C2  8892               	bsf	146,4,c	;volatile
   3051  0012C4                     
-  3052                           ;Controler.c: 483:     TRISCbits.RC0 = 0;
+  3052                           ;Controler.c: 505:     TRISCbits.RC0 = 0;
   3053  0012C4  9094               	bcf	148,0,c	;volatile
   3054  0012C6                     
-  3055                           ;Controler.c: 484:     TRISCbits.RC1 = 0;
+  3055                           ;Controler.c: 506:     TRISCbits.RC1 = 0;
   3056  0012C6  9294               	bcf	148,1,c	;volatile
   3057  0012C8                     
-  3058                           ;Controler.c: 485:     TRISCbits.RC2 = 0;
+  3058                           ;Controler.c: 507:     TRISCbits.RC2 = 0;
   3059  0012C8  9494               	bcf	148,2,c	;volatile
   3060  0012CA                     
-  3061                           ;Controler.c: 486:     LATC0 = 0;
+  3061                           ;Controler.c: 508:     LATC0 = 0;
   3062  0012CA  908B               	bcf	3979,0,c	;volatile
   3063  0012CC                     
-  3064                           ;Controler.c: 487:     LATC1 = 0;
+  3064                           ;Controler.c: 509:     LATC1 = 0;
   3065  0012CC  928B               	bcf	3979,1,c	;volatile
   3066  0012CE                     
-  3067                           ;Controler.c: 488:     LATC2 = 0;
+  3067                           ;Controler.c: 510:     LATC2 = 0;
   3068  0012CE  948B               	bcf	3979,2,c	;volatile
   3069  0012D0                     
-  3070                           ;Controler.c: 490:     LCD_String_xy(2,0,"SI: ");
+  3070                           ;Controler.c: 512:     LCD_String_xy(2,0,"SI: ");
   3071  0012D0  0E00               	movlw	0
   3072  0012D2  6E0A               	movwf	LCD_String_xy@pos^0,c
   3073  0012D4  0E31               	movlw	low STR_8
@@ -3158,7 +3158,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3077  0012DC  0E02               	movlw	2
   3078  0012DE  ECA4  F00A         	call	_LCD_String_xy
   3079  0012E2                     
-  3080                           ;Controler.c: 491:     if (PORTAbits.RA2) {
+  3080                           ;Controler.c: 513:     if (PORTAbits.RA2) {
   3081  0012E2  A480               	btfss	128,2,c	;volatile
   3082  0012E4  EF76  F009         	goto	u1891
   3083  0012E8  EF78  F009         	goto	u1890
@@ -3166,10 +3166,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3085  0012EC  EF84  F009         	goto	l416
   3086  0012F0                     u1890:
   3087  0012F0                     
-  3088                           ;Controler.c: 492:         LATC0 = 1;
+  3088                           ;Controler.c: 514:         LATC0 = 1;
   3089  0012F0  808B               	bsf	3979,0,c	;volatile
   3090  0012F2                     
-  3091                           ;Controler.c: 493:         LCD_String_xy(6,0,"ON ");
+  3091                           ;Controler.c: 515:         LCD_String_xy(6,0,"ON ");
   3092  0012F2  0E00               	movlw	0
   3093  0012F4  6E0A               	movwf	LCD_String_xy@pos^0,c
   3094  0012F6  0E3B               	movlw	low STR_9
@@ -3179,14 +3179,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3098  0012FE  0E06               	movlw	6
   3099  001300  ECA4  F00A         	call	_LCD_String_xy
   3100                           
-  3101                           ;Controler.c: 494:     } else {
+  3101                           ;Controler.c: 516:     } else {
   3102  001304  EF8E  F009         	goto	l417
   3103  001308                     l416:
   3104                           
-  3105                           ;Controler.c: 495:         LATC0 = 0;
+  3105                           ;Controler.c: 517:         LATC0 = 0;
   3106  001308  908B               	bcf	3979,0,c	;volatile
   3107  00130A                     
-  3108                           ;Controler.c: 496:         LCD_String_xy(6,0,"OFF");
+  3108                           ;Controler.c: 518:         LCD_String_xy(6,0,"OFF");
   3109  00130A  0E00               	movlw	0
   3110  00130C  6E0A               	movwf	LCD_String_xy@pos^0,c
   3111  00130E  0E47               	movlw	low STR_10
@@ -3197,7 +3197,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3116  001318  ECA4  F00A         	call	_LCD_String_xy
   3117  00131C                     l417:
   3118                           
-  3119                           ;Controler.c: 499:     LCD_String_xy(3,0,"ST: ");
+  3119                           ;Controler.c: 521:     LCD_String_xy(3,0,"ST: ");
   3120  00131C  0E00               	movlw	0
   3121  00131E  6E0A               	movwf	LCD_String_xy@pos^0,c
   3122  001320  0E36               	movlw	low STR_11
@@ -3207,7 +3207,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3126  001328  0E03               	movlw	3
   3127  00132A  ECA4  F00A         	call	_LCD_String_xy
   3128  00132E                     
-  3129                           ;Controler.c: 500:     if(PORTAbits.RA3){
+  3129                           ;Controler.c: 522:     if(PORTAbits.RA3){
   3130  00132E  A680               	btfss	128,3,c	;volatile
   3131  001330  EF9C  F009         	goto	u1901
   3132  001334  EF9E  F009         	goto	u1900
@@ -3215,10 +3215,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3134  001338  EFAA  F009         	goto	l418
   3135  00133C                     u1900:
   3136  00133C                     
-  3137                           ;Controler.c: 501:         LATC1 = 1;
+  3137                           ;Controler.c: 523:         LATC1 = 1;
   3138  00133C  828B               	bsf	3979,1,c	;volatile
   3139  00133E                     
-  3140                           ;Controler.c: 502:         LCD_String_xy(6,0,"ON ");
+  3140                           ;Controler.c: 524:         LCD_String_xy(6,0,"ON ");
   3141  00133E  0E00               	movlw	0
   3142  001340  6E0A               	movwf	LCD_String_xy@pos^0,c
   3143  001342  0E3B               	movlw	low STR_9
@@ -3228,14 +3228,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3147  00134A  0E06               	movlw	6
   3148  00134C  ECA4  F00A         	call	_LCD_String_xy
   3149                           
-  3150                           ;Controler.c: 503:     }else{
+  3150                           ;Controler.c: 525:     }else{
   3151  001350  EFB4  F009         	goto	l419
   3152  001354                     l418:
   3153                           
-  3154                           ;Controler.c: 504:         LATC1 = 0;
+  3154                           ;Controler.c: 526:         LATC1 = 0;
   3155  001354  928B               	bcf	3979,1,c	;volatile
   3156  001356                     
-  3157                           ;Controler.c: 505:         LCD_String_xy(6,0,"OFF");
+  3157                           ;Controler.c: 527:         LCD_String_xy(6,0,"OFF");
   3158  001356  0E00               	movlw	0
   3159  001358  6E0A               	movwf	LCD_String_xy@pos^0,c
   3160  00135A  0E47               	movlw	low STR_10
@@ -3246,7 +3246,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3165  001364  ECA4  F00A         	call	_LCD_String_xy
   3166  001368                     l419:
   3167                           
-  3168                           ;Controler.c: 508:     LCD_String_xy(4,0,"SF: ");
+  3168                           ;Controler.c: 530:     LCD_String_xy(4,0,"SF: ");
   3169  001368  0E00               	movlw	0
   3170  00136A  6E0A               	movwf	LCD_String_xy@pos^0,c
   3171  00136C  0E2C               	movlw	low STR_14
@@ -3256,7 +3256,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3175  001374  0E04               	movlw	4
   3176  001376  ECA4  F00A         	call	_LCD_String_xy
   3177  00137A                     
-  3178                           ;Controler.c: 509:     if(PORTAbits.RA4){
+  3178                           ;Controler.c: 531:     if(PORTAbits.RA4){
   3179  00137A  A880               	btfss	128,4,c	;volatile
   3180  00137C  EFC2  F009         	goto	u1911
   3181  001380  EFC4  F009         	goto	u1910
@@ -3264,10 +3264,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3183  001384  EFD0  F009         	goto	l420
   3184  001388                     u1910:
   3185  001388                     
-  3186                           ;Controler.c: 510:         LATC2 = 1;
+  3186                           ;Controler.c: 532:         LATC2 = 1;
   3187  001388  848B               	bsf	3979,2,c	;volatile
   3188  00138A                     
-  3189                           ;Controler.c: 511:         LCD_String_xy(6,0,"ON ");
+  3189                           ;Controler.c: 533:         LCD_String_xy(6,0,"ON ");
   3190  00138A  0E00               	movlw	0
   3191  00138C  6E0A               	movwf	LCD_String_xy@pos^0,c
   3192  00138E  0E3B               	movlw	low STR_9
@@ -3277,14 +3277,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3196  001396  0E06               	movlw	6
   3197  001398  ECA4  F00A         	call	_LCD_String_xy
   3198                           
-  3199                           ;Controler.c: 512:     }else{
+  3199                           ;Controler.c: 534:     }else{
   3200  00139C  EFDB  F009         	goto	l422
   3201  0013A0                     l420:
   3202                           
-  3203                           ;Controler.c: 513:         LATC2 = 0;
+  3203                           ;Controler.c: 535:         LATC2 = 0;
   3204  0013A0  948B               	bcf	3979,2,c	;volatile
   3205  0013A2                     
-  3206                           ;Controler.c: 514:         LCD_String_xy(6,0,"OFF");
+  3206                           ;Controler.c: 536:         LCD_String_xy(6,0,"OFF");
   3207  0013A2  0E00               	movlw	0
   3208  0013A4  6E0A               	movwf	LCD_String_xy@pos^0,c
   3209  0013A6  0E47               	movlw	low STR_10
@@ -3294,7 +3294,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3213  0013AE  0E06               	movlw	6
   3214  0013B0  ECA4  F00A         	call	_LCD_String_xy
   3215  0013B4                     
-  3216                           ;Controler.c: 515:         PORTEbits.RE0 = 0;
+  3216                           ;Controler.c: 537:         PORTEbits.RE0 = 0;
   3217  0013B4  9084               	bcf	132,0,c	;volatile
   3218  0013B6                     l422:
   3219  0013B6  0012               	return		;funcret
@@ -3303,7 +3303,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3222                           
   3223 ;; *************** function _protocoloNoche *****************
   3224 ;; Defined at:
-  3225 ;;		line 519 in file "Controler.c"
+  3225 ;;		line 545 in file "Controler.c"
   3226 ;; Parameters:    Size  Location     Type
   3227 ;;		None
   3228 ;; Auto vars:     Size  Location     Type
@@ -3339,38 +3339,38 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3258  000FBA                     _protocoloNoche:
   3259                           	callstack 26
   3260  000FBA                     
-  3261                           ;Controler.c: 520:     ADCON1 = 0x0F;
+  3261                           ;Controler.c: 546:     ADCON1 = 0x0F;
   3262  000FBA  0E0F               	movlw	15
   3263  000FBC  6EC1               	movwf	193,c	;volatile
   3264  000FBE                     
-  3265                           ;Controler.c: 521:     TRISAbits.RA2 = 1;
+  3265                           ;Controler.c: 547:     TRISAbits.RA2 = 1;
   3266  000FBE  8492               	bsf	146,2,c	;volatile
   3267  000FC0                     
-  3268                           ;Controler.c: 522:     TRISAbits.RA3 = 1;
+  3268                           ;Controler.c: 548:     TRISAbits.RA3 = 1;
   3269  000FC0  8692               	bsf	146,3,c	;volatile
   3270  000FC2                     
-  3271                           ;Controler.c: 523:     TRISAbits.RA4 = 1;
+  3271                           ;Controler.c: 549:     TRISAbits.RA4 = 1;
   3272  000FC2  8892               	bsf	146,4,c	;volatile
   3273  000FC4                     
-  3274                           ;Controler.c: 524:     TRISCbits.RC0 = 0;
+  3274                           ;Controler.c: 550:     TRISCbits.RC0 = 0;
   3275  000FC4  9094               	bcf	148,0,c	;volatile
   3276  000FC6                     
-  3277                           ;Controler.c: 525:     TRISCbits.RC1 = 0;
+  3277                           ;Controler.c: 551:     TRISCbits.RC1 = 0;
   3278  000FC6  9294               	bcf	148,1,c	;volatile
   3279  000FC8                     
-  3280                           ;Controler.c: 526:     TRISCbits.RC2 = 0;
+  3280                           ;Controler.c: 552:     TRISCbits.RC2 = 0;
   3281  000FC8  9494               	bcf	148,2,c	;volatile
   3282  000FCA                     
-  3283                           ;Controler.c: 527:     LATC0 = 0;
+  3283                           ;Controler.c: 553:     LATC0 = 0;
   3284  000FCA  908B               	bcf	3979,0,c	;volatile
   3285  000FCC                     
-  3286                           ;Controler.c: 528:     LATC1 = 0;
+  3286                           ;Controler.c: 554:     LATC1 = 0;
   3287  000FCC  928B               	bcf	3979,1,c	;volatile
   3288  000FCE                     
-  3289                           ;Controler.c: 529:     LATC2 = 0;
+  3289                           ;Controler.c: 555:     LATC2 = 0;
   3290  000FCE  948B               	bcf	3979,2,c	;volatile
   3291  000FD0                     
-  3292                           ;Controler.c: 531:     LCD_String_xy(2,0,"SI: ");
+  3292                           ;Controler.c: 557:     LCD_String_xy(2,0,"SI: ");
   3293  000FD0  0E00               	movlw	0
   3294  000FD2  6E0A               	movwf	LCD_String_xy@pos^0,c
   3295  000FD4  0E31               	movlw	low STR_8
@@ -3380,7 +3380,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3299  000FDC  0E02               	movlw	2
   3300  000FDE  ECA4  F00A         	call	_LCD_String_xy
   3301  000FE2                     
-  3302                           ;Controler.c: 532:     if (PORTAbits.RA2) {
+  3302                           ;Controler.c: 558:     if (PORTAbits.RA2) {
   3303  000FE2  A480               	btfss	128,2,c	;volatile
   3304  000FE4  EFF6  F007         	goto	u1921
   3305  000FE8  EFF8  F007         	goto	u1920
@@ -3388,10 +3388,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3307  000FEC  EF05  F008         	goto	l425
   3308  000FF0                     u1920:
   3309  000FF0                     
-  3310                           ;Controler.c: 533:         LATC0 = 1;
+  3310                           ;Controler.c: 559:         LATC0 = 1;
   3311  000FF0  808B               	bsf	3979,0,c	;volatile
   3312  000FF2                     
-  3313                           ;Controler.c: 534:         LCD_String_xy(6,0,"ON ");
+  3313                           ;Controler.c: 560:         LCD_String_xy(6,0,"ON ");
   3314  000FF2  0E00               	movlw	0
   3315  000FF4  6E0A               	movwf	LCD_String_xy@pos^0,c
   3316  000FF6  0E3B               	movlw	low STR_9
@@ -3401,20 +3401,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3320  000FFE  0E06               	movlw	6
   3321  001000  ECA4  F00A         	call	_LCD_String_xy
   3322  001004                     
-  3323                           ;Controler.c: 535:         PORTEbits.RE0 = 1;
+  3323                           ;Controler.c: 561:         PORTEbits.RE0 = 1;
   3324  001004  8084               	bsf	132,0,c	;volatile
   3325                           
-  3326                           ;Controler.c: 536:     } else {
+  3326                           ;Controler.c: 562:     } else {
   3327  001006  EF12  F008         	goto	l2744
   3328  00100A                     l425:
   3329                           
-  3330                           ;Controler.c: 537:         LATC0 = 0;
+  3330                           ;Controler.c: 563:         LATC0 = 0;
   3331  00100A  908B               	bcf	3979,0,c	;volatile
   3332                           
-  3333                           ;Controler.c: 538:         PORTEbits.RE0 = 0;
+  3333                           ;Controler.c: 564:         PORTEbits.RE0 = 0;
   3334  00100C  9084               	bcf	132,0,c	;volatile
   3335  00100E                     
-  3336                           ;Controler.c: 539:         LCD_String_xy(6,0,"OFF");
+  3336                           ;Controler.c: 565:         LCD_String_xy(6,0,"OFF");
   3337  00100E  0E00               	movlw	0
   3338  001010  6E0A               	movwf	LCD_String_xy@pos^0,c
   3339  001012  0E47               	movlw	low STR_10
@@ -3424,12 +3424,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3343  00101A  0E06               	movlw	6
   3344  00101C  ECA4  F00A         	call	_LCD_String_xy
   3345  001020                     
-  3346                           ;Controler.c: 540:         char buffer_TX[] = "";
+  3346                           ;Controler.c: 566:         char buffer_TX[] = "";
   3347  001020  0E00               	movlw	0
   3348  001022  6E0E               	movwf	protocoloNoche@buffer_TX^0,c
   3349  001024                     l2744:
   3350                           
-  3351                           ;Controler.c: 543:     LCD_String_xy(3,0,"ST: ");
+  3351                           ;Controler.c: 569:     LCD_String_xy(3,0,"ST: ");
   3352  001024  0E00               	movlw	0
   3353  001026  6E0A               	movwf	LCD_String_xy@pos^0,c
   3354  001028  0E36               	movlw	low STR_11
@@ -3439,7 +3439,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3358  001030  0E03               	movlw	3
   3359  001032  ECA4  F00A         	call	_LCD_String_xy
   3360  001036                     
-  3361                           ;Controler.c: 544:     if(PORTAbits.RA3){
+  3361                           ;Controler.c: 570:     if(PORTAbits.RA3){
   3362  001036  A680               	btfss	128,3,c	;volatile
   3363  001038  EF20  F008         	goto	u1931
   3364  00103C  EF22  F008         	goto	u1930
@@ -3447,13 +3447,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3366  001040  EF2F  F008         	goto	l429
   3367  001044                     u1930:
   3368  001044                     
-  3369                           ;Controler.c: 545:         LATC1 = 1;
+  3369                           ;Controler.c: 571:         LATC1 = 1;
   3370  001044  828B               	bsf	3979,1,c	;volatile
   3371                           
-  3372                           ;Controler.c: 546:         PORTEbits.RE0 = 1;
+  3372                           ;Controler.c: 572:         PORTEbits.RE0 = 1;
   3373  001046  8084               	bsf	132,0,c	;volatile
   3374  001048                     
-  3375                           ;Controler.c: 547:         LCD_String_xy(6,0,"ON ");
+  3375                           ;Controler.c: 573:         LCD_String_xy(6,0,"ON ");
   3376  001048  0E00               	movlw	0
   3377  00104A  6E0A               	movwf	LCD_String_xy@pos^0,c
   3378  00104C  0E3B               	movlw	low STR_9
@@ -3463,17 +3463,17 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3382  001054  0E06               	movlw	6
   3383  001056  ECA4  F00A         	call	_LCD_String_xy
   3384                           
-  3385                           ;Controler.c: 548:     }else{
+  3385                           ;Controler.c: 574:     }else{
   3386  00105A  EF3C  F008         	goto	l2756
   3387  00105E                     l429:
   3388                           
-  3389                           ;Controler.c: 549:         LATC1 = 0;
+  3389                           ;Controler.c: 575:         LATC1 = 0;
   3390  00105E  928B               	bcf	3979,1,c	;volatile
   3391                           
-  3392                           ;Controler.c: 550:         PORTEbits.RE0 = 0;
+  3392                           ;Controler.c: 576:         PORTEbits.RE0 = 0;
   3393  001060  9084               	bcf	132,0,c	;volatile
   3394  001062                     
-  3395                           ;Controler.c: 551:         LCD_String_xy(6,0,"OFF");
+  3395                           ;Controler.c: 577:         LCD_String_xy(6,0,"OFF");
   3396  001062  0E00               	movlw	0
   3397  001064  6E0A               	movwf	LCD_String_xy@pos^0,c
   3398  001066  0E47               	movlw	low STR_10
@@ -3483,12 +3483,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3402  00106E  0E06               	movlw	6
   3403  001070  ECA4  F00A         	call	_LCD_String_xy
   3404  001074                     
-  3405                           ;Controler.c: 552:         char buffer_TX[] = "";
+  3405                           ;Controler.c: 578:         char buffer_TX[] = "";
   3406  001074  0E00               	movlw	0
   3407  001076  6E0F               	movwf	protocoloNoche@buffer_TX_984^0,c
   3408  001078                     l2756:
   3409                           
-  3410                           ;Controler.c: 555:     LCD_String_xy(4,0,"SF: ");
+  3410                           ;Controler.c: 581:     LCD_String_xy(4,0,"SF: ");
   3411  001078  0E00               	movlw	0
   3412  00107A  6E0A               	movwf	LCD_String_xy@pos^0,c
   3413  00107C  0E2C               	movlw	low STR_14
@@ -3498,7 +3498,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3417  001084  0E04               	movlw	4
   3418  001086  ECA4  F00A         	call	_LCD_String_xy
   3419  00108A                     
-  3420                           ;Controler.c: 556:     if(PORTAbits.RA4){
+  3420                           ;Controler.c: 582:     if(PORTAbits.RA4){
   3421  00108A  A880               	btfss	128,4,c	;volatile
   3422  00108C  EF4A  F008         	goto	u1941
   3423  001090  EF4C  F008         	goto	u1940
@@ -3506,13 +3506,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3425  001094  EF59  F008         	goto	l433
   3426  001098                     u1940:
   3427  001098                     
-  3428                           ;Controler.c: 557:         LATC2 = 1;
+  3428                           ;Controler.c: 583:         LATC2 = 1;
   3429  001098  848B               	bsf	3979,2,c	;volatile
   3430                           
-  3431                           ;Controler.c: 558:         PORTEbits.RE0 = 1;
+  3431                           ;Controler.c: 584:         PORTEbits.RE0 = 1;
   3432  00109A  8084               	bsf	132,0,c	;volatile
   3433  00109C                     
-  3434                           ;Controler.c: 559:         LCD_String_xy(6,0,"ON ");
+  3434                           ;Controler.c: 585:         LCD_String_xy(6,0,"ON ");
   3435  00109C  0E00               	movlw	0
   3436  00109E  6E0A               	movwf	LCD_String_xy@pos^0,c
   3437  0010A0  0E3B               	movlw	low STR_9
@@ -3522,14 +3522,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3441  0010A8  0E06               	movlw	6
   3442  0010AA  ECA4  F00A         	call	_LCD_String_xy
   3443                           
-  3444                           ;Controler.c: 560:     }else{
+  3444                           ;Controler.c: 586:     }else{
   3445  0010AE  EF64  F008         	goto	l2768
   3446  0010B2                     l433:
   3447                           
-  3448                           ;Controler.c: 561:         LATC2 = 0;
+  3448                           ;Controler.c: 587:         LATC2 = 0;
   3449  0010B2  948B               	bcf	3979,2,c	;volatile
   3450  0010B4                     
-  3451                           ;Controler.c: 562:         LCD_String_xy(6,0,"OFF");
+  3451                           ;Controler.c: 588:         LCD_String_xy(6,0,"OFF");
   3452  0010B4  0E00               	movlw	0
   3453  0010B6  6E0A               	movwf	LCD_String_xy@pos^0,c
   3454  0010B8  0E47               	movlw	low STR_10
@@ -3539,11 +3539,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3458  0010C0  0E06               	movlw	6
   3459  0010C2  ECA4  F00A         	call	_LCD_String_xy
   3460  0010C6                     
-  3461                           ;Controler.c: 563:         PORTEbits.RE0 = 0;
+  3461                           ;Controler.c: 589:         PORTEbits.RE0 = 0;
   3462  0010C6  9084               	bcf	132,0,c	;volatile
   3463  0010C8                     l2768:
   3464                           
-  3465                           ;Controler.c: 566:                 if(PORTAbits.RA2 || PORTAbits.RA3 || PORTAbits.RA4){
+  3465                           ;Controler.c: 592:                 if(PORTAbits.RA2 || PORTAbits.RA3 || PORTAbits.RA4){
   3466  0010C8  B480               	btfsc	128,2,c	;volatile
   3467  0010CA  EF69  F008         	goto	u1951
   3468  0010CE  EF6B  F008         	goto	u1950
@@ -3564,14 +3564,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3483  0010F2                     u1970:
   3484  0010F2                     l2774:
   3485                           
-  3486                           ;Controler.c: 569:                 for (int i = 0; i < 39; i++) {
+  3486                           ;Controler.c: 595:                 for (int i = 0; i < 39; i++) {
   3487  0010F2  0E00               	movlw	0
   3488  0010F4  6E11               	movwf	(protocoloNoche@i+1)^0,c
   3489  0010F6  0E00               	movlw	0
   3490  0010F8  6E10               	movwf	protocoloNoche@i^0,c
   3491  0010FA                     l440:
   3492                           
-  3493                           ;Controler.c: 571:                      while (!TXSTAbits.TRMT) {
+  3493                           ;Controler.c: 597:                      while (!TXSTAbits.TRMT) {
   3494  0010FA  A2AC               	btfss	172,1,c	;volatile
   3495  0010FC  EF82  F008         	goto	u1981
   3496  001100  EF84  F008         	goto	u1980
@@ -3579,7 +3579,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3498  001104  EF7D  F008         	goto	l440
   3499  001108                     u1980:
   3500  001108                     
-  3501                           ;Controler.c: 574:                      TXREG = buffer_TX[i];
+  3501                           ;Controler.c: 600:                      TXREG = buffer_TX[i];
   3502  001108  0E20               	movlw	low _buffer_TX
   3503  00110A  2410               	addwf	protocoloNoche@i^0,w,c
   3504  00110C  6ED9               	movwf	fsr2l,c
@@ -3589,7 +3589,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3508  001114  50DF               	movf	indf2,w,c
   3509  001116  6EAD               	movwf	173,c	;volatile
   3510  001118                     
-  3511                           ;Controler.c: 575:                  }
+  3511                           ;Controler.c: 601:                  }
   3512  001118  4A10               	infsnz	protocoloNoche@i^0,f,c
   3513  00111A  2A11               	incf	(protocoloNoche@i+1)^0,f,c
   3514  00111C  BE11               	btfsc	(protocoloNoche@i+1)^0,7,c
@@ -3611,7 +3611,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3530                           
   3531 ;; *************** function _protocoloFDS *****************
   3532 ;; Defined at:
-  3533 ;;		line 416 in file "Controler.c"
+  3533 ;;		line 434 in file "Controler.c"
   3534 ;; Parameters:    Size  Location     Type
   3535 ;;		None
   3536 ;; Auto vars:     Size  Location     Type
@@ -3647,38 +3647,38 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3566  00113A                     _protocoloFDS:
   3567                           	callstack 26
   3568  00113A                     
-  3569                           ;Controler.c: 417:     ADCON1 = 0x0F;
+  3569                           ;Controler.c: 435:     ADCON1 = 0x0F;
   3570  00113A  0E0F               	movlw	15
   3571  00113C  6EC1               	movwf	193,c	;volatile
   3572  00113E                     
-  3573                           ;Controler.c: 418:     TRISAbits.RA2 = 1;
+  3573                           ;Controler.c: 436:     TRISAbits.RA2 = 1;
   3574  00113E  8492               	bsf	146,2,c	;volatile
   3575  001140                     
-  3576                           ;Controler.c: 419:     TRISAbits.RA3 = 1;
+  3576                           ;Controler.c: 437:     TRISAbits.RA3 = 1;
   3577  001140  8692               	bsf	146,3,c	;volatile
   3578  001142                     
-  3579                           ;Controler.c: 420:     TRISAbits.RA4 = 1;
+  3579                           ;Controler.c: 438:     TRISAbits.RA4 = 1;
   3580  001142  8892               	bsf	146,4,c	;volatile
   3581  001144                     
-  3582                           ;Controler.c: 421:     TRISCbits.RC0 = 0;
+  3582                           ;Controler.c: 439:     TRISCbits.RC0 = 0;
   3583  001144  9094               	bcf	148,0,c	;volatile
   3584  001146                     
-  3585                           ;Controler.c: 422:     TRISCbits.RC1 = 0;
+  3585                           ;Controler.c: 440:     TRISCbits.RC1 = 0;
   3586  001146  9294               	bcf	148,1,c	;volatile
   3587  001148                     
-  3588                           ;Controler.c: 423:     TRISCbits.RC2 = 0;
+  3588                           ;Controler.c: 441:     TRISCbits.RC2 = 0;
   3589  001148  9494               	bcf	148,2,c	;volatile
   3590  00114A                     
-  3591                           ;Controler.c: 424:     LATC0 = 0;
+  3591                           ;Controler.c: 442:     LATC0 = 0;
   3592  00114A  908B               	bcf	3979,0,c	;volatile
   3593  00114C                     
-  3594                           ;Controler.c: 425:     LATC1 = 0;
+  3594                           ;Controler.c: 443:     LATC1 = 0;
   3595  00114C  928B               	bcf	3979,1,c	;volatile
   3596  00114E                     
-  3597                           ;Controler.c: 426:     LATC2 = 0;
+  3597                           ;Controler.c: 444:     LATC2 = 0;
   3598  00114E  948B               	bcf	3979,2,c	;volatile
   3599  001150                     
-  3600                           ;Controler.c: 429:     LCD_String_xy(2,0,"SI: ");
+  3600                           ;Controler.c: 447:     LCD_String_xy(2,0,"SI: ");
   3601  001150  0E00               	movlw	0
   3602  001152  6E0A               	movwf	LCD_String_xy@pos^0,c
   3603  001154  0E31               	movlw	low STR_8
@@ -3688,7 +3688,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3607  00115C  0E02               	movlw	2
   3608  00115E  ECA4  F00A         	call	_LCD_String_xy
   3609  001162                     
-  3610                           ;Controler.c: 430:     if (PORTAbits.RA2) {
+  3610                           ;Controler.c: 448:     if (PORTAbits.RA2) {
   3611  001162  A480               	btfss	128,2,c	;volatile
   3612  001164  EFB6  F008         	goto	u1811
   3613  001168  EFB8  F008         	goto	u1810
@@ -3696,10 +3696,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3615  00116C  EFC5  F008         	goto	l395
   3616  001170                     u1810:
   3617  001170                     
-  3618                           ;Controler.c: 431:         LATC0 = 1;
+  3618                           ;Controler.c: 449:         LATC0 = 1;
   3619  001170  808B               	bsf	3979,0,c	;volatile
   3620  001172                     
-  3621                           ;Controler.c: 432:         LCD_String_xy(6,0,"ON ");
+  3621                           ;Controler.c: 450:         LCD_String_xy(6,0,"ON ");
   3622  001172  0E00               	movlw	0
   3623  001174  6E0A               	movwf	LCD_String_xy@pos^0,c
   3624  001176  0E3B               	movlw	low STR_9
@@ -3709,20 +3709,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3628  00117E  0E06               	movlw	6
   3629  001180  ECA4  F00A         	call	_LCD_String_xy
   3630  001184                     
-  3631                           ;Controler.c: 433:         PORTEbits.RE0 = 1;
+  3631                           ;Controler.c: 451:         PORTEbits.RE0 = 1;
   3632  001184  8084               	bsf	132,0,c	;volatile
   3633                           
-  3634                           ;Controler.c: 434:     } else {
+  3634                           ;Controler.c: 452:     } else {
   3635  001186  EFD2  F008         	goto	l2620
   3636  00118A                     l395:
   3637                           
-  3638                           ;Controler.c: 435:         LATC0 = 0;
+  3638                           ;Controler.c: 453:         LATC0 = 0;
   3639  00118A  908B               	bcf	3979,0,c	;volatile
   3640                           
-  3641                           ;Controler.c: 436:         PORTEbits.RE0 = 0;
+  3641                           ;Controler.c: 454:         PORTEbits.RE0 = 0;
   3642  00118C  9084               	bcf	132,0,c	;volatile
   3643  00118E                     
-  3644                           ;Controler.c: 437:         LCD_String_xy(6,0,"OFF");
+  3644                           ;Controler.c: 455:         LCD_String_xy(6,0,"OFF");
   3645  00118E  0E00               	movlw	0
   3646  001190  6E0A               	movwf	LCD_String_xy@pos^0,c
   3647  001192  0E47               	movlw	low STR_10
@@ -3732,12 +3732,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3651  00119A  0E06               	movlw	6
   3652  00119C  ECA4  F00A         	call	_LCD_String_xy
   3653  0011A0                     
-  3654                           ;Controler.c: 438:         char buffer_TX[] = "";
+  3654                           ;Controler.c: 456:         char buffer_TX[] = "";
   3655  0011A0  0E00               	movlw	0
   3656  0011A2  6E0E               	movwf	protocoloFDS@buffer_TX^0,c
   3657  0011A4                     l2620:
   3658                           
-  3659                           ;Controler.c: 441:     LCD_String_xy(3,0,"ST: ");
+  3659                           ;Controler.c: 459:     LCD_String_xy(3,0,"ST: ");
   3660  0011A4  0E00               	movlw	0
   3661  0011A6  6E0A               	movwf	LCD_String_xy@pos^0,c
   3662  0011A8  0E36               	movlw	low STR_11
@@ -3747,7 +3747,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3666  0011B0  0E03               	movlw	3
   3667  0011B2  ECA4  F00A         	call	_LCD_String_xy
   3668  0011B6                     
-  3669                           ;Controler.c: 442:     if(PORTAbits.RA3){
+  3669                           ;Controler.c: 460:     if(PORTAbits.RA3){
   3670  0011B6  A680               	btfss	128,3,c	;volatile
   3671  0011B8  EFE0  F008         	goto	u1821
   3672  0011BC  EFE2  F008         	goto	u1820
@@ -3755,13 +3755,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3674  0011C0  EFEF  F008         	goto	l399
   3675  0011C4                     u1820:
   3676  0011C4                     
-  3677                           ;Controler.c: 443:         LATC1 = 1;
+  3677                           ;Controler.c: 461:         LATC1 = 1;
   3678  0011C4  828B               	bsf	3979,1,c	;volatile
   3679                           
-  3680                           ;Controler.c: 444:         PORTEbits.RE0 = 1;
+  3680                           ;Controler.c: 462:         PORTEbits.RE0 = 1;
   3681  0011C6  8084               	bsf	132,0,c	;volatile
   3682  0011C8                     
-  3683                           ;Controler.c: 445:         LCD_String_xy(6,0,"ON ");
+  3683                           ;Controler.c: 463:         LCD_String_xy(6,0,"ON ");
   3684  0011C8  0E00               	movlw	0
   3685  0011CA  6E0A               	movwf	LCD_String_xy@pos^0,c
   3686  0011CC  0E3B               	movlw	low STR_9
@@ -3771,17 +3771,17 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3690  0011D4  0E06               	movlw	6
   3691  0011D6  ECA4  F00A         	call	_LCD_String_xy
   3692                           
-  3693                           ;Controler.c: 446:     }else{
+  3693                           ;Controler.c: 464:     }else{
   3694  0011DA  EFFC  F008         	goto	l2632
   3695  0011DE                     l399:
   3696                           
-  3697                           ;Controler.c: 447:         LATC1 = 0;
+  3697                           ;Controler.c: 465:         LATC1 = 0;
   3698  0011DE  928B               	bcf	3979,1,c	;volatile
   3699                           
-  3700                           ;Controler.c: 448:         PORTEbits.RE0 = 0;
+  3700                           ;Controler.c: 466:         PORTEbits.RE0 = 0;
   3701  0011E0  9084               	bcf	132,0,c	;volatile
   3702  0011E2                     
-  3703                           ;Controler.c: 449:         LCD_String_xy(6,0,"OFF");
+  3703                           ;Controler.c: 467:         LCD_String_xy(6,0,"OFF");
   3704  0011E2  0E00               	movlw	0
   3705  0011E4  6E0A               	movwf	LCD_String_xy@pos^0,c
   3706  0011E6  0E47               	movlw	low STR_10
@@ -3791,12 +3791,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3710  0011EE  0E06               	movlw	6
   3711  0011F0  ECA4  F00A         	call	_LCD_String_xy
   3712  0011F4                     
-  3713                           ;Controler.c: 450:         char buffer_TX[] = "";
+  3713                           ;Controler.c: 468:         char buffer_TX[] = "";
   3714  0011F4  0E00               	movlw	0
   3715  0011F6  6E0F               	movwf	protocoloFDS@buffer_TX_959^0,c
   3716  0011F8                     l2632:
   3717                           
-  3718                           ;Controler.c: 453:     LCD_String_xy(4,0,"SF: ");
+  3718                           ;Controler.c: 471:     LCD_String_xy(4,0,"SF: ");
   3719  0011F8  0E00               	movlw	0
   3720  0011FA  6E0A               	movwf	LCD_String_xy@pos^0,c
   3721  0011FC  0E2C               	movlw	low STR_14
@@ -3806,7 +3806,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3725  001204  0E04               	movlw	4
   3726  001206  ECA4  F00A         	call	_LCD_String_xy
   3727  00120A                     
-  3728                           ;Controler.c: 454:     if(PORTAbits.RA4){
+  3728                           ;Controler.c: 472:     if(PORTAbits.RA4){
   3729  00120A  A880               	btfss	128,4,c	;volatile
   3730  00120C  EF0A  F009         	goto	u1831
   3731  001210  EF0C  F009         	goto	u1830
@@ -3814,13 +3814,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3733  001214  EF19  F009         	goto	l403
   3734  001218                     u1830:
   3735  001218                     
-  3736                           ;Controler.c: 455:         LATC2 = 1;
+  3736                           ;Controler.c: 473:         LATC2 = 1;
   3737  001218  848B               	bsf	3979,2,c	;volatile
   3738                           
-  3739                           ;Controler.c: 456:         PORTEbits.RE0 = 1;
+  3739                           ;Controler.c: 474:         PORTEbits.RE0 = 1;
   3740  00121A  8084               	bsf	132,0,c	;volatile
   3741  00121C                     
-  3742                           ;Controler.c: 457:         LCD_String_xy(6,0,"ON ");
+  3742                           ;Controler.c: 475:         LCD_String_xy(6,0,"ON ");
   3743  00121C  0E00               	movlw	0
   3744  00121E  6E0A               	movwf	LCD_String_xy@pos^0,c
   3745  001220  0E3B               	movlw	low STR_9
@@ -3830,14 +3830,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3749  001228  0E06               	movlw	6
   3750  00122A  ECA4  F00A         	call	_LCD_String_xy
   3751                           
-  3752                           ;Controler.c: 458:     }else{
+  3752                           ;Controler.c: 476:     }else{
   3753  00122E  EF24  F009         	goto	l2644
   3754  001232                     l403:
   3755                           
-  3756                           ;Controler.c: 459:         LATC2 = 0;
+  3756                           ;Controler.c: 477:         LATC2 = 0;
   3757  001232  948B               	bcf	3979,2,c	;volatile
   3758  001234                     
-  3759                           ;Controler.c: 460:         LCD_String_xy(6,0,"OFF");
+  3759                           ;Controler.c: 478:         LCD_String_xy(6,0,"OFF");
   3760  001234  0E00               	movlw	0
   3761  001236  6E0A               	movwf	LCD_String_xy@pos^0,c
   3762  001238  0E47               	movlw	low STR_10
@@ -3847,11 +3847,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3766  001240  0E06               	movlw	6
   3767  001242  ECA4  F00A         	call	_LCD_String_xy
   3768  001246                     
-  3769                           ;Controler.c: 461:         PORTEbits.RE0 = 0;
+  3769                           ;Controler.c: 479:         PORTEbits.RE0 = 0;
   3770  001246  9084               	bcf	132,0,c	;volatile
   3771  001248                     l2644:
   3772                           
-  3773                           ;Controler.c: 464:                 if(PORTAbits.RA2 || PORTAbits.RA3 || PORTAbits.RA4){
+  3773                           ;Controler.c: 482:                 if(PORTAbits.RA2 || PORTAbits.RA3 || PORTAbits.RA4){
   3774  001248  B480               	btfsc	128,2,c	;volatile
   3775  00124A  EF29  F009         	goto	u1841
   3776  00124E  EF2B  F009         	goto	u1840
@@ -3872,14 +3872,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3791  001272                     u1860:
   3792  001272                     l2650:
   3793                           
-  3794                           ;Controler.c: 467:                 for (int i = 0; i < 39; i++) {
+  3794                           ;Controler.c: 485:                 for (int i = 0; i < 39; i++) {
   3795  001272  0E00               	movlw	0
   3796  001274  6E11               	movwf	(protocoloFDS@i+1)^0,c
   3797  001276  0E00               	movlw	0
   3798  001278  6E10               	movwf	protocoloFDS@i^0,c
   3799  00127A                     l410:
   3800                           
-  3801                           ;Controler.c: 469:                      while (!TXSTAbits.TRMT) {
+  3801                           ;Controler.c: 487:                      while (!TXSTAbits.TRMT) {
   3802  00127A  A2AC               	btfss	172,1,c	;volatile
   3803  00127C  EF42  F009         	goto	u1871
   3804  001280  EF44  F009         	goto	u1870
@@ -3887,7 +3887,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3806  001284  EF3D  F009         	goto	l410
   3807  001288                     u1870:
   3808  001288                     
-  3809                           ;Controler.c: 472:                      TXREG = buffer_TX[i];
+  3809                           ;Controler.c: 490:                      TXREG = buffer_TX[i];
   3810  001288  0E20               	movlw	low _buffer_TX
   3811  00128A  2410               	addwf	protocoloFDS@i^0,w,c
   3812  00128C  6ED9               	movwf	fsr2l,c
@@ -3897,7 +3897,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3816  001294  50DF               	movf	indf2,w,c
   3817  001296  6EAD               	movwf	173,c	;volatile
   3818  001298                     
-  3819                           ;Controler.c: 473:                  }
+  3819                           ;Controler.c: 491:                  }
   3820  001298  4A10               	infsnz	protocoloFDS@i^0,f,c
   3821  00129A  2A11               	incf	(protocoloFDS@i+1)^0,f,c
   3822  00129C  BE11               	btfsc	(protocoloFDS@i+1)^0,7,c
@@ -3919,7 +3919,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3838                           
   3839 ;; *************** function _desactivarAlarm *****************
   3840 ;; Defined at:
-  3841 ;;		line 272 in file "Controler.c"
+  3841 ;;		line 278 in file "Controler.c"
   3842 ;; Parameters:    Size  Location     Type
   3843 ;;		None
   3844 ;; Auto vars:     Size  Location     Type
@@ -3955,10 +3955,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3874  001ADE                     _desactivarAlarm:
   3875                           	callstack 26
   3876  001ADE                     
-  3877                           ;Controler.c: 273:      LCD_Clear();
+  3877                           ;Controler.c: 279:      LCD_Clear();
   3878  001ADE  ECF4  F00D         	call	_LCD_Clear	;wreg free
   3879  001AE2                     
-  3880                           ;Controler.c: 274:      LCD_String_xy(2,1,"ALARMA DESACTIVADA");
+  3880                           ;Controler.c: 280:      LCD_String_xy(2,1,"ALARMA DESACTIVADA");
   3881  001AE2  0E01               	movlw	1
   3882  001AE4  6E0A               	movwf	LCD_String_xy@pos^0,c
   3883  001AE6  0E01               	movlw	low STR_4
@@ -3968,23 +3968,23 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3887  001AEE  0E02               	movlw	2
   3888  001AF0  ECA4  F00A         	call	_LCD_String_xy
   3889  001AF4                     
-  3890                           ;Controler.c: 275:      MSdelay(100);
+  3890                           ;Controler.c: 281:      MSdelay(100);
   3891  001AF4  0E00               	movlw	0
   3892  001AF6  6E02               	movwf	(MSdelay@val+1)^0,c
   3893  001AF8  0E64               	movlw	100
   3894  001AFA  6E01               	movwf	MSdelay@val^0,c
   3895  001AFC  ECD2  F00B         	call	_MSdelay	;wreg free
   3896  001B00                     
-  3897                           ;Controler.c: 276:       LATC0 = 0;
+  3897                           ;Controler.c: 282:       LATC0 = 0;
   3898  001B00  908B               	bcf	3979,0,c	;volatile
   3899  001B02                     
-  3900                           ;Controler.c: 277:       LATC1 = 0;
+  3900                           ;Controler.c: 283:       LATC1 = 0;
   3901  001B02  928B               	bcf	3979,1,c	;volatile
   3902  001B04                     
-  3903                           ;Controler.c: 278:       LATC2 = 0;
+  3903                           ;Controler.c: 284:       LATC2 = 0;
   3904  001B04  948B               	bcf	3979,2,c	;volatile
   3905  001B06                     
-  3906                           ;Controler.c: 279:       PORTEbits.RE0 = 0;
+  3906                           ;Controler.c: 285:       PORTEbits.RE0 = 0;
   3907  001B06  9084               	bcf	132,0,c	;volatile
   3908  001B08  0012               	return		;funcret
   3909  001B0A                     __end_of_desactivarAlarm:
@@ -3992,7 +3992,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3911                           
   3912 ;; *************** function _RTC_Read_Clock *****************
   3913 ;; Defined at:
-  3914 ;;		line 89 in file "Controler.c"
+  3914 ;;		line 85 in file "Controler.c"
   3915 ;; Parameters:    Size  Location     Type
   3916 ;;  read_clock_a    1    wreg     unsigned char 
   3917 ;; Auto vars:     Size  Location     Type
@@ -4033,20 +4033,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3952                           ;RTC_Read_Clock@read_clock_address stored from wreg
   3953  001836  6E04               	movwf	RTC_Read_Clock@read_clock_address^0,c
   3954  001838                     
-  3955                           ;Controler.c: 89: void RTC_Read_Clock(char read_clock_address);Controler.c: 90: {;Contro
-      +                          ler.c: 91:     I2C_Start(0xD0);
+  3955                           ;Controler.c: 85: void RTC_Read_Clock(char read_clock_address);Controler.c: 86: {;Contro
+      +                          ler.c: 87:     I2C_Start(0xD0);
   3956  001838  0ED0               	movlw	208
   3957  00183A  EC41  F00D         	call	_I2C_Start
   3958                           
-  3959                           ;Controler.c: 92:     I2C_Write(read_clock_address);
+  3959                           ;Controler.c: 88:     I2C_Write(read_clock_address);
   3960  00183E  5004               	movf	RTC_Read_Clock@read_clock_address^0,w,c
   3961  001840  EC85  F00D         	call	_I2C_Write
   3962                           
-  3963                           ;Controler.c: 93:     I2C_Repeated_Start(0xD1);
+  3963                           ;Controler.c: 89:     I2C_Repeated_Start(0xD1);
   3964  001844  0ED1               	movlw	209
   3965  001846  EC58  F00D         	call	_I2C_Repeated_Start
   3966  00184A                     
-  3967                           ;Controler.c: 94:     sec = I2C_Read(0);
+  3967                           ;Controler.c: 90:     sec = I2C_Read(0);
   3968  00184A  0E00               	movlw	0
   3969  00184C  EC9E  F00C         	call	_I2C_Read
   3970  001850  6E03               	movwf	??_RTC_Read_Clock^0,c
@@ -4056,7 +4056,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3974  001858  6BEA               	clrf	(_sec+1)& (0+255),b
   3975  00185A                     
   3976                           ; BSR set to: 0
-  3977                           ;Controler.c: 95:     min = I2C_Read(0);
+  3977                           ;Controler.c: 91:     min = I2C_Read(0);
   3978  00185A  0E00               	movlw	0
   3979  00185C  EC9E  F00C         	call	_I2C_Read
   3980  001860  6E03               	movwf	??_RTC_Read_Clock^0,c
@@ -4066,7 +4066,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3984  001868  6BE8               	clrf	(_min+1)& (0+255),b
   3985  00186A                     
   3986                           ; BSR set to: 0
-  3987                           ;Controler.c: 96:     hour= I2C_Read(1);
+  3987                           ;Controler.c: 92:     hour= I2C_Read(1);
   3988  00186A  0E01               	movlw	1
   3989  00186C  EC9E  F00C         	call	_I2C_Read
   3990  001870  6E03               	movwf	??_RTC_Read_Clock^0,c
@@ -4693,7 +4693,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4605                           
   4606 ;; *************** function _LCD_Init *****************
   4607 ;; Defined at:
-  4608 ;;		line 5 in file "LCD_20x4.c"
+  4608 ;;		line 13 in file "LCD_20x4.c"
   4609 ;; Parameters:    Size  Location     Type
   4610 ;;		None
   4611 ;; Auto vars:     Size  Location     Type
@@ -4728,45 +4728,45 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4640  0018C0                     _LCD_Init:
   4641                           	callstack 28
   4642  0018C0                     
-  4643                           ;LCD_20x4.c: 7:     TRISE = 0;
+  4643                           ;LCD_20x4.c: 15:     TRISE = 0;
   4644  0018C0  0E00               	movlw	0
   4645  0018C2  6E96               	movwf	150,c	;volatile
   4646                           
-  4647                           ;LCD_20x4.c: 8:  TRISD = 0;
+  4647                           ;LCD_20x4.c: 16:  TRISD = 0;
   4648  0018C4  0E00               	movlw	0
   4649  0018C6  6E95               	movwf	149,c	;volatile
   4650  0018C8                     
-  4651                           ;LCD_20x4.c: 10:  MSdelay(20);
+  4651                           ;LCD_20x4.c: 18:  MSdelay(20);
   4652  0018C8  0E00               	movlw	0
   4653  0018CA  6E02               	movwf	(MSdelay@val+1)^0,c
   4654  0018CC  0E14               	movlw	20
   4655  0018CE  6E01               	movwf	MSdelay@val^0,c
   4656  0018D0  ECD2  F00B         	call	_MSdelay	;wreg free
   4657  0018D4                     
-  4658                           ;LCD_20x4.c: 11:  LCD_Command (0x38);
+  4658                           ;LCD_20x4.c: 19:  LCD_Command (0x38);
   4659  0018D4  0E38               	movlw	56
   4660  0018D6  ECA4  F00D         	call	_LCD_Command
   4661  0018DA                     
-  4662                           ;LCD_20x4.c: 12:  LCD_Command (0x0C);
+  4662                           ;LCD_20x4.c: 20:  LCD_Command (0x0C);
   4663  0018DA  0E0C               	movlw	12
   4664  0018DC  ECA4  F00D         	call	_LCD_Command
   4665  0018E0                     
-  4666                           ;LCD_20x4.c: 13:  LCD_Command (0x06);
+  4666                           ;LCD_20x4.c: 21:  LCD_Command (0x06);
   4667  0018E0  0E06               	movlw	6
   4668  0018E2  ECA4  F00D         	call	_LCD_Command
   4669  0018E6                     
-  4670                           ;LCD_20x4.c: 14:  LCD_Command (0x01);
+  4670                           ;LCD_20x4.c: 22:  LCD_Command (0x01);
   4671  0018E6  0E01               	movlw	1
   4672  0018E8  ECA4  F00D         	call	_LCD_Command
   4673  0018EC                     
-  4674                           ;LCD_20x4.c: 15:  MSdelay(3);
+  4674                           ;LCD_20x4.c: 23:  MSdelay(3);
   4675  0018EC  0E00               	movlw	0
   4676  0018EE  6E02               	movwf	(MSdelay@val+1)^0,c
   4677  0018F0  0E03               	movlw	3
   4678  0018F2  6E01               	movwf	MSdelay@val^0,c
   4679  0018F4  ECD2  F00B         	call	_MSdelay	;wreg free
   4680  0018F8                     
-  4681                           ;LCD_20x4.c: 16:  LCD_Command (0x80);
+  4681                           ;LCD_20x4.c: 24:  LCD_Command (0x80);
   4682  0018F8  0E80               	movlw	128
   4683  0018FA  ECA4  F00D         	call	_LCD_Command
   4684  0018FE  0012               	return		;funcret
@@ -4841,7 +4841,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4753                           
   4754 ;; *************** function _ActivateAlarm *****************
   4755 ;; Defined at:
-  4756 ;;		line 282 in file "Controler.c"
+  4756 ;;		line 291 in file "Controler.c"
   4757 ;; Parameters:    Size  Location     Type
   4758 ;;		None
   4759 ;; Auto vars:     Size  Location     Type
@@ -4877,7 +4877,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4789  0017EE                     _ActivateAlarm:
   4790                           	callstack 26
   4791  0017EE                     
-  4792                           ;Controler.c: 283:      LCD_String_xy(2,1,"ALARMA ACTIVADA");
+  4792                           ;Controler.c: 292:      LCD_String_xy(2,1,"ALARMA ACTIVADA");
   4793  0017EE  0E01               	movlw	1
   4794  0017F0  6E0A               	movwf	LCD_String_xy@pos^0,c
   4795  0017F2  0E14               	movlw	low STR_5
@@ -4887,17 +4887,17 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4799  0017FA  0E02               	movlw	2
   4800  0017FC  ECA4  F00A         	call	_LCD_String_xy
   4801  001800                     
-  4802                           ;Controler.c: 284:      MSdelay(100);
+  4802                           ;Controler.c: 293:      MSdelay(100);
   4803  001800  0E00               	movlw	0
   4804  001802  6E02               	movwf	(MSdelay@val+1)^0,c
   4805  001804  0E64               	movlw	100
   4806  001806  6E01               	movwf	MSdelay@val^0,c
   4807  001808  ECD2  F00B         	call	_MSdelay	;wreg free
   4808  00180C                     
-  4809                           ;Controler.c: 285:      LCD_Clear();
+  4809                           ;Controler.c: 294:      LCD_Clear();
   4810  00180C  ECF4  F00D         	call	_LCD_Clear	;wreg free
   4811                           
-  4812                           ;Controler.c: 286:      LCD_String_xy(0,12,"ALARMA:");
+  4812                           ;Controler.c: 295:      LCD_String_xy(0,12,"ALARMA:");
   4813  001810  0E0C               	movlw	12
   4814  001812  6E0A               	movwf	LCD_String_xy@pos^0,c
   4815  001814  0E24               	movlw	low STR_6
@@ -4907,7 +4907,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4819  00181C  0E00               	movlw	0
   4820  00181E  ECA4  F00A         	call	_LCD_String_xy
   4821                           
-  4822                           ;Controler.c: 287:      LCD_String_xy(0,19,"ON");
+  4822                           ;Controler.c: 296:      LCD_String_xy(0,19,"ON");
   4823  001822  0E13               	movlw	19
   4824  001824  6E0A               	movwf	LCD_String_xy@pos^0,c
   4825  001826  0E4B               	movlw	low STR_7
@@ -4922,7 +4922,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4834                           
   4835 ;; *************** function _LCD_String_xy *****************
   4836 ;; Defined at:
-  4837 ;;		line 60 in file "LCD_20x4.c"
+  4837 ;;		line 85 in file "LCD_20x4.c"
   4838 ;; Parameters:    Size  Location     Type
   4839 ;;  row             1    wreg     unsigned char 
   4840 ;;  pos             1    9[COMRAM] unsigned char 
@@ -4982,8 +4982,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4894                           ;LCD_String_xy@row stored from wreg
   4895  001548  6E0D               	movwf	LCD_String_xy@row^0,c
   4896  00154A                     
-  4897                           ;LCD_20x4.c: 60: void LCD_String_xy(char row,char pos,const char *str);LCD_20x4.c: 61: {
-      +                          ;LCD_20x4.c: 62:     if (row == 1)
+  4897                           ;LCD_20x4.c: 85: void LCD_String_xy(char row,char pos,const char *str);LCD_20x4.c: 86: {
+      +                          ;LCD_20x4.c: 87:     if (row == 1)
   4898  00154A  040D               	decf	LCD_String_xy@row^0,w,c
   4899  00154C  A4D8               	btfss	status,2,c
   4900  00154E  EFAB  F00A         	goto	u1691
@@ -4992,7 +4992,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4903  001556  EFB4  F00A         	goto	l2464
   4904  00155A                     u1690:
   4905  00155A                     
-  4906                           ;LCD_20x4.c: 63:   LCD_Command((pos & 0x0F)|0x80);
+  4906                           ;LCD_20x4.c: 88:   LCD_Command((pos & 0x0F)|0x80);
   4907  00155A  500A               	movf	LCD_String_xy@pos^0,w,c
   4908  00155C  0B0F               	andlw	15
   4909  00155E  0980               	iorlw	128
@@ -5008,7 +5008,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4919  001576  EFC4  F00A         	goto	l2468
   4920  00157A                     u1700:
   4921  00157A                     
-  4922                           ;LCD_20x4.c: 65:   LCD_Command((pos & 0x0F)|0xC0);
+  4922                           ;LCD_20x4.c: 90:   LCD_Command((pos & 0x0F)|0xC0);
   4923  00157A  500A               	movf	LCD_String_xy@pos^0,w,c
   4924  00157C  0B0F               	andlw	15
   4925  00157E  09C0               	iorlw	192
@@ -5024,7 +5024,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4935  001596  EFD4  F00A         	goto	l2472
   4936  00159A                     u1710:
   4937  00159A                     
-  4938                           ;LCD_20x4.c: 67:   LCD_Command((pos & 0x0F)|0x94);
+  4938                           ;LCD_20x4.c: 92:   LCD_Command((pos & 0x0F)|0x94);
   4939  00159A  500A               	movf	LCD_String_xy@pos^0,w,c
   4940  00159C  0B0F               	andlw	15
   4941  00159E  0994               	iorlw	148
@@ -5040,7 +5040,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4951  0015B6  EFE4  F00A         	goto	l67
   4952  0015BA                     u1720:
   4953  0015BA                     
-  4954                           ;LCD_20x4.c: 69:   LCD_Command((pos & 0x0F)|0xD4);
+  4954                           ;LCD_20x4.c: 94:   LCD_Command((pos & 0x0F)|0xD4);
   4955  0015BA  500A               	movf	LCD_String_xy@pos^0,w,c
   4956  0015BC  0B0F               	andlw	15
   4957  0015BE  09D4               	iorlw	212
@@ -5049,7 +5049,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4960  0015C8                     l67:
   4961  0015C8                     l2476:
   4962                           
-  4963                           ;LCD_20x4.c: 70:  LCD_String(str);
+  4963                           ;LCD_20x4.c: 95:  LCD_String(str);
   4964  0015C8  C00B  F008         	movff	LCD_String_xy@str,LCD_String@msg
   4965  0015CC  C00C  F009         	movff	LCD_String_xy@str+1,LCD_String@msg+1
   4966  0015D0  EC0E  F00D         	call	_LCD_String	;wreg free
@@ -5059,7 +5059,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4970                           
   4971 ;; *************** function _LCD_String *****************
   4972 ;; Defined at:
-  4973 ;;		line 50 in file "LCD_20x4.c"
+  4973 ;;		line 72 in file "LCD_20x4.c"
   4974 ;; Parameters:    Size  Location     Type
   4975 ;;  msg             2    7[COMRAM] PTR const unsigned char 
   4976 ;;		 -> STR_52(4), STR_51(4), STR_50(5), STR_49(4), 
@@ -5106,12 +5106,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5017  001A1C                     _LCD_String:
   5018                           	callstack 26
   5019  001A1C                     
-  5020                           ;LCD_20x4.c: 50: void LCD_String(const char *msg);LCD_20x4.c: 51: {;LCD_20x4.c: 52:  whi
+  5020                           ;LCD_20x4.c: 72: void LCD_String(const char *msg);LCD_20x4.c: 73: {;LCD_20x4.c: 74:  whi
       +                          le((*msg)!=0)
   5021  001A1C  EF1A  F00D         	goto	l2390
   5022  001A20                     l2386:
   5023                           
-  5024                           ;LCD_20x4.c: 53:  {;LCD_20x4.c: 54:    LCD_Char(*msg);
+  5024                           ;LCD_20x4.c: 75:  {;LCD_20x4.c: 76:    LCD_Char(*msg);
   5025  001A20  C008  FFF6         	movff	LCD_String@msg,tblptrl
   5026  001A24  C009  FFF7         	movff	LCD_String@msg+1,tblptrh
   5027  001A28                     	if	0	;tblptru may be non-zero
@@ -5122,12 +5122,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5032  001A2A  50F5               	movf	tablat,w,c
   5033  001A2C  EC96  F00D         	call	_LCD_Char
   5034  001A30                     
-  5035                           ;LCD_20x4.c: 55:    msg++;
+  5035                           ;LCD_20x4.c: 77:    msg++;
   5036  001A30  4A08               	infsnz	LCD_String@msg^0,f,c
   5037  001A32  2A09               	incf	(LCD_String@msg+1)^0,f,c
   5038  001A34                     l2390:
   5039                           
-  5040                           ;LCD_20x4.c: 52:  while((*msg)!=0)
+  5040                           ;LCD_20x4.c: 74:  while((*msg)!=0)
   5041  001A34  C008  FFF6         	movff	LCD_String@msg,tblptrl
   5042  001A38  C009  FFF7         	movff	LCD_String@msg+1,tblptrh
   5043  001A3C                     	if	0	;tblptru may be non-zero
@@ -5149,7 +5149,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5059                           
   5060 ;; *************** function _LCD_Char *****************
   5061 ;; Defined at:
-  5062 ;;		line 38 in file "LCD_20x4.c"
+  5062 ;;		line 57 in file "LCD_20x4.c"
   5063 ;; Parameters:    Size  Location     Type
   5064 ;;  char_data       1    wreg     unsigned char 
   5065 ;; Auto vars:     Size  Location     Type
@@ -5188,23 +5188,23 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5098                           ;LCD_Char@char_data stored from wreg
   5099  001B2C  6E07               	movwf	LCD_Char@char_data^0,c
   5100  001B2E                     
-  5101                           ;LCD_20x4.c: 38: void LCD_Char(char char_data);LCD_20x4.c: 39: {;LCD_20x4.c: 40:  LATD =
+  5101                           ;LCD_20x4.c: 57: void LCD_Char(char char_data);LCD_20x4.c: 58: {;LCD_20x4.c: 59:  LATD =
       +                           char_data;
   5102  001B2E  C007  FF8C         	movff	LCD_Char@char_data,3980	;volatile
   5103  001B32                     
-  5104                           ;LCD_20x4.c: 41:  LATE1 = 1;
+  5104                           ;LCD_20x4.c: 60:  LATE1 = 1;
   5105  001B32  828D               	bsf	3981,1,c	;volatile
   5106  001B34                     
-  5107                           ;LCD_20x4.c: 43:     LATE2 = 1;
+  5107                           ;LCD_20x4.c: 62:     LATE2 = 1;
   5108  001B34  848D               	bsf	3981,2,c	;volatile
   5109  001B36                     
-  5110                           ;LCD_20x4.c: 44:  __nop();
+  5110                           ;LCD_20x4.c: 63:  __nop();
   5111  001B36  F000               	nop	
   5112  001B38                     
-  5113                           ;LCD_20x4.c: 45:  LATE2 = 0;
+  5113                           ;LCD_20x4.c: 64:  LATE2 = 0;
   5114  001B38  948D               	bcf	3981,2,c	;volatile
   5115  001B3A                     
-  5116                           ;LCD_20x4.c: 46:  MSdelay(3);
+  5116                           ;LCD_20x4.c: 65:  MSdelay(3);
   5117  001B3A  0E00               	movlw	0
   5118  001B3C  6E02               	movwf	(MSdelay@val+1)^0,c
   5119  001B3E  0E03               	movlw	3
@@ -5216,7 +5216,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5125                           
   5126 ;; *************** function _LCD_Clear *****************
   5127 ;; Defined at:
-  5128 ;;		line 19 in file "LCD_20x4.c"
+  5128 ;;		line 31 in file "LCD_20x4.c"
   5129 ;; Parameters:    Size  Location     Type
   5130 ;;		None
   5131 ;; Auto vars:     Size  Location     Type
@@ -5253,11 +5253,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5162  001BE8                     _LCD_Clear:
   5163                           	callstack 27
   5164  001BE8                     
-  5165                           ;LCD_20x4.c: 21:      LCD_Command (0x01);
+  5165                           ;LCD_20x4.c: 33:      LCD_Command (0x01);
   5166  001BE8  0E01               	movlw	1
   5167  001BEA  ECA4  F00D         	call	_LCD_Command
   5168                           
-  5169                           ;LCD_20x4.c: 22:         MSdelay(3);
+  5169                           ;LCD_20x4.c: 34:         MSdelay(3);
   5170  001BEE  0E00               	movlw	0
   5171  001BF0  6E02               	movwf	(MSdelay@val+1)^0,c
   5172  001BF2  0E03               	movlw	3
@@ -5269,7 +5269,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5178                           
   5179 ;; *************** function _LCD_Command *****************
   5180 ;; Defined at:
-  5181 ;;		line 27 in file "LCD_20x4.c"
+  5181 ;;		line 43 in file "LCD_20x4.c"
   5182 ;; Parameters:    Size  Location     Type
   5183 ;;  cmd             1    wreg     unsigned char 
   5184 ;; Auto vars:     Size  Location     Type
@@ -5310,23 +5310,23 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5219                           ;LCD_Command@cmd stored from wreg
   5220  001B48  6E07               	movwf	LCD_Command@cmd^0,c
   5221  001B4A                     
-  5222                           ;LCD_20x4.c: 27: void LCD_Command(char cmd );LCD_20x4.c: 28: {;LCD_20x4.c: 29:  LATD = c
+  5222                           ;LCD_20x4.c: 43: void LCD_Command(char cmd );LCD_20x4.c: 44: {;LCD_20x4.c: 45:  LATD = c
       +                          md;
   5223  001B4A  C007  FF8C         	movff	LCD_Command@cmd,3980	;volatile
   5224  001B4E                     
-  5225                           ;LCD_20x4.c: 30:  LATE1 = 0;
+  5225                           ;LCD_20x4.c: 46:  LATE1 = 0;
   5226  001B4E  928D               	bcf	3981,1,c	;volatile
   5227  001B50                     
-  5228                           ;LCD_20x4.c: 32:     LATE2 = 1;
+  5228                           ;LCD_20x4.c: 48:     LATE2 = 1;
   5229  001B50  848D               	bsf	3981,2,c	;volatile
   5230  001B52                     
-  5231                           ;LCD_20x4.c: 33:  __nop();
+  5231                           ;LCD_20x4.c: 49:  __nop();
   5232  001B52  F000               	nop	
   5233  001B54                     
-  5234                           ;LCD_20x4.c: 34:  LATE2 = 0;
+  5234                           ;LCD_20x4.c: 50:  LATE2 = 0;
   5235  001B54  948D               	bcf	3981,2,c	;volatile
   5236  001B56                     
-  5237                           ;LCD_20x4.c: 35:  MSdelay(3);
+  5237                           ;LCD_20x4.c: 51:  MSdelay(3);
   5238  001B56  0E00               	movlw	0
   5239  001B58  6E02               	movwf	(MSdelay@val+1)^0,c
   5240  001B5A  0E03               	movlw	3
@@ -5338,7 +5338,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5246                           
   5247 ;; *************** function _MSdelay *****************
   5248 ;; Defined at:
-  5249 ;;		line 86 in file "LCD_20x4.c"
+  5249 ;;		line 119 in file "LCD_20x4.c"
   5250 ;; Parameters:    Size  Location     Type
   5251 ;;  val             2    0[COMRAM] unsigned int 
   5252 ;; Auto vars:     Size  Location     Type
@@ -5378,8 +5378,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5286  0017A4                     _MSdelay:
   5287                           	callstack 26
   5288  0017A4                     
-  5289                           ;LCD_20x4.c: 86: void MSdelay(unsigned int val);LCD_20x4.c: 87: {;LCD_20x4.c: 88:      u
-      +                          nsigned int i,j;;LCD_20x4.c: 89:         for(i=0;i<=val;i++)
+  5289                           ;LCD_20x4.c: 119: void MSdelay(unsigned int val);LCD_20x4.c: 120: {;LCD_20x4.c: 121:    
+      +                            unsigned int i,j;;LCD_20x4.c: 122:         for(i=0;i<=val;i++)
   5290  0017A4  0E00               	movlw	0
   5291  0017A6  6E04               	movwf	(MSdelay@i+1)^0,c
   5292  0017A8  0E00               	movlw	0
@@ -5387,7 +5387,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5294  0017AC  EFEB  F00B         	goto	l2250
   5295  0017B0                     l2238:
   5296                           
-  5297                           ;LCD_20x4.c: 90:             for(j=0;j<165;j++);
+  5297                           ;LCD_20x4.c: 123:             for(j=0;j<165;j++);
   5298  0017B0  0E00               	movlw	0
   5299  0017B2  6E06               	movwf	(MSdelay@j+1)^0,c
   5300  0017B4  0E00               	movlw	0
@@ -6193,7 +6193,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Sun Dec 13 22:24:40 2020
+Symbol Table                                                                                   Sun Dec 13 23:39:52 2020
 
                    protocoloNoche@F3773 00EC                     protocoloNoche@F3775 00EB  
                     __size_of_I2C_Ready 0012                      __size_of_I2C_Start 002E  

@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Controler.c" 2
-# 26 "Controler.c"
+# 18 "Controler.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -165,7 +165,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 26 "Controler.c" 2
+# 18 "Controler.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 3
@@ -222,7 +222,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 27 "Controler.c" 2
+# 19 "Controler.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 1 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 3
@@ -282,7 +282,7 @@ uldiv_t uldiv (unsigned long, unsigned long);
 
 
 size_t __ctype_get_mb_cur_max(void);
-# 28 "Controler.c" 2
+# 20 "Controler.c" 2
 
 # 1 "./Configuration_Header_File.h" 1
 
@@ -5888,7 +5888,7 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config EBTRB = OFF
-# 29 "Controler.c" 2
+# 21 "Controler.c" 2
 
 # 1 "./LCD_20x4_Header_File.h" 1
 # 37 "./LCD_20x4_Header_File.h"
@@ -5903,7 +5903,7 @@ void MSdelay(unsigned int );
 void LCD_String_xy(char ,char ,const char*);
 void LCD_Custom_Char(unsigned char loc,unsigned char *msg);
 void LCD_Clear();
-# 30 "Controler.c" 2
+# 22 "Controler.c" 2
 
 # 1 "./PIC18F4550_ADC_Header_File.h" 1
 # 13 "./PIC18F4550_ADC_Header_File.h"
@@ -5973,7 +5973,7 @@ void LCD_Clear();
 
 void ADC_Init();
 int ADC_Read(int);
-# 31 "Controler.c" 2
+# 23 "Controler.c" 2
 
 
 
@@ -6105,8 +6105,8 @@ void I2C_Nack()
  ACKEN=1;
     while(ACKEN);
 }
-# 34 "Controler.c" 2
-# 47 "Controler.c"
+# 26 "Controler.c" 2
+# 39 "Controler.c"
 int sec,min,hour;
 int Day,Date,Month,Year;
 
@@ -6149,6 +6149,10 @@ void protocoloProtocoloDia();
 char buffer_TX[] = "detecto un intruso \r";
 
 
+
+
+
+
 void RTC_Read_Clock(char read_clock_address)
 {
     I2C_Start(0xD0);
@@ -6159,6 +6163,10 @@ void RTC_Read_Clock(char read_clock_address)
     hour= I2C_Read(1);
 
 }
+
+
+
+
 
 void RTC_Read_Calendar(char read_calendar_address)
 {
@@ -6171,6 +6179,9 @@ void RTC_Read_Calendar(char read_calendar_address)
     Year = I2C_Read(1);
     I2C_Stop();
 }
+
+
+
 
 
 void main() {
@@ -6200,7 +6211,7 @@ void main() {
     BAUDCONbits.BRG16 = 0;
     RCSTAbits.SPEN = 1;
     SPBRG = (unsigned char) (((8000000L / 9600) / 64) - 1);
-# 152 "Controler.c"
+# 155 "Controler.c"
          ADCON1bits.PCFG=0xff;
          TRISAbits.RA1 = 1;
          LATA=0X00;
@@ -6321,6 +6332,9 @@ void main() {
 }
 
 
+
+
+
  void desactivarAlarm(){
      LCD_Clear();
      LCD_String_xy(2,1,"ALARMA DESACTIVADA");
@@ -6331,6 +6345,9 @@ void main() {
       PORTEbits.RE0 = 0;
  }
 
+
+
+
  void ActivateAlarm(){
      LCD_String_xy(2,1,"ALARMA ACTIVADA");
      MSdelay(100);
@@ -6338,6 +6355,8 @@ void main() {
      LCD_String_xy(0,12,"ALARMA:");
      LCD_String_xy(0,19,"ON");
  }
+
+
 
 
 
@@ -6404,6 +6423,9 @@ void SensorMovimiento() {
 }
 
 
+
+
+
 void protocoloEmergencia(){
     ADCON1 = 0x0F;
     TRISAbits.RA2 = 1;
@@ -6464,6 +6486,10 @@ void protocoloEmergencia(){
 
             }
 }
+
+
+
+
 
 void protocoloFDS(){
     ADCON1 = 0x0F;
@@ -6527,6 +6553,10 @@ void protocoloFDS(){
             }
 }
 
+
+
+
+
 void protocoloProtocoloDia(){
     ADCON1 = 0x0F;
     TRISAbits.RA2 = 1;
@@ -6567,6 +6597,10 @@ void protocoloProtocoloDia(){
         PORTEbits.RE0 = 0;
     }
 }
+
+
+
+
 
 void protocoloNoche(){
     ADCON1 = 0x0F;

@@ -5,21 +5,13 @@
 /*!
 \file   Controler.c
 \date   2020-12-11
-\author Alvaro Erazo <danieleraso@unicauca.edu.co>
-\
+\author Alvaro Daniel Erazo Ramirez ( 104618011588 ) <danieleraso@unicauca.edu.co>
+\author Braian Alexis Bastidas Diaz ( 104617011741 ) <brabadi@unicauca.edu.co>
+\author Juan Sebastian Sanchez Pizo ( 104617012079 ) <spjuan@unicauca.edu.co>
+\author Héctor Esteban Coral Ordoñez ( 104616011357 ) <hectorcoral@unicauca.edu.co>
+
 \brief  Example Controler .
 
-\par Copyright
-Information contained herein is proprietary to and constitutes valuable
-confidential trade secrets of unicauca, and
-is subject to restrictions on use and disclosure.
-
-\par
-Copyright (c) unicauca 2020. All rights reserved.
-
-\par
-The copyright notices above do not evidence any actual or
-intended publication of this material.
  ******************************************************************************
  */
 
@@ -86,6 +78,10 @@ void protocoloProtocoloDia();
 char buffer_TX[] = "detecto un intruso \r";
 
 
+  /**
+   * Obtener la hora actual.
+   * Un objeto time, con la hora actual.
+   */
 void RTC_Read_Clock(char read_clock_address)
 {
     I2C_Start(device_id_write);
@@ -97,6 +93,10 @@ void RTC_Read_Clock(char read_clock_address)
     
 }
 
+  /**
+   * Obtener la hora actual.
+   * Un objeto time, con la hora actual.
+  */
 void RTC_Read_Calendar(char read_calendar_address)
 {   
     I2C_Start(device_id_write);
@@ -109,7 +109,10 @@ void RTC_Read_Calendar(char read_calendar_address)
     I2C_Stop();
 }
 
-
+/**
+   * Funcion principal.
+   * .fn funcion principal
+   */
 void main() {
     
     char secs[10],mins[10],hours[10];
@@ -268,7 +271,10 @@ void main() {
     }
 }
 
-
+  /**
+   * Muestra en la pantalla 'alarma desactivada'.
+   * @return Un objeto time, con la hora actual.
+   */
  void desactivarAlarm(){
      LCD_Clear();
      LCD_String_xy(2,1,"ALARMA DESACTIVADA");
@@ -278,7 +284,10 @@ void main() {
       LED4 = 0;
       BUZZER = 0;
  }
- 
+  /**
+   * Muestra en la pantalla 'alarma Activada'.
+   * Un objeto time, con la hora actual.
+   */
  void ActivateAlarm(){
      LCD_String_xy(2,1,"ALARMA ACTIVADA");
      MSdelay(100);
@@ -288,17 +297,19 @@ void main() {
  }
 
  
-/*
- */
+  /**
+   * Sensor movimiento'.
+   * @fn activa o desactiva los tres sensores y con estos los leds y el buzer.
+   */
 void SensorMovimiento() {
-    ADCON1 = 0x0F; /* this makes all pins as a digital I/O pins */
-    PORT_Dir = 1; /* set as input port */
+    ADCON1 = 0x0F; /* @param this makes all pins as a digital I/O pins */
+    PORT_Dir = 1; /* @param set as input port */
     PORT_Dir2 = 1;
     PORT_Dir3 = 1;
-    LED_Dir = 0; /* set as output port */
+    LED_Dir = 0; /* @param set as output port */
     LED_Dir2 = 0;
     LED_Dir3 = 0;
-    LED2 = 0; /* initially turned OFF LED */
+    LED2 = 0; /* @param initially turned OFF LED */
     LED3 = 0;
     LED4 = 0;
     
@@ -351,16 +362,19 @@ void SensorMovimiento() {
             }
 }
 
-
+  /**
+   * Sensor protocoloEmergencia'.
+   * @fn .protocolo espepecial manda un mensaje y encienden las luces activa alarma 
+   */
 void protocoloEmergencia(){
-    ADCON1 = 0x0F; /* this makes all pins as a digital I/O pins */
-    PORT_Dir = 1; /* set as input port */
+    ADCON1 = 0x0F; /* @param this makes all pins as a digital I/O pins */
+    PORT_Dir = 1; /* @param set as input port */
     PORT_Dir2 = 1;
     PORT_Dir3 = 1;
-    LED_Dir = 0; /* set as output port */
+    LED_Dir = 0; /* @param set as output port */
     LED_Dir2 = 0;
     LED_Dir3 = 0;
-    LED2 = 0; /* initially turned OFF LED */
+    LED2 = 0; /* @param initially turned OFF LED */
     LED3 = 0;
     LED4 = 0;
     
@@ -413,15 +427,19 @@ void protocoloEmergencia(){
             }
 }
 
+  /**
+   * Sensor protocolo Fin de Semana (Sunday,saturday)'.
+   * @fn Enciende luces y alarma. 
+   */
 void protocoloFDS(){
-    ADCON1 = 0x0F; /* this makes all pins as a digital I/O pins */
-    PORT_Dir = 1; /* set as input port */
+    ADCON1 = 0x0F; /* @param this makes all pins as a digital I/O pins */
+    PORT_Dir = 1; /* @param  set as input port */
     PORT_Dir2 = 1;
     PORT_Dir3 = 1;
-    LED_Dir = 0; /* set as output port */
+    LED_Dir = 0; /*@param set as output port */
     LED_Dir2 = 0;
     LED_Dir3 = 0;
-    LED2 = 0; /* initially turned OFF LED */
+    LED2 = 0; /* @param initially turned OFF LED */
     LED3 = 0;
     LED4 = 0;
    
@@ -475,6 +493,10 @@ void protocoloFDS(){
             }
 }
 
+  /**
+   * Sensor protocolo dia 6 a 18'.
+   * @fn Enciende alarma. 
+   */
 void protocoloProtocoloDia(){
     ADCON1 = 0x0F; /* this makes all pins as a digital I/O pins */
     PORT_Dir = 1; /* set as input port */
@@ -516,15 +538,19 @@ void protocoloProtocoloDia(){
     }
 }
 
+/**
+   * Sensor protocolo noche 18 a 6'.
+   * @fn Enciende alarma. 
+   */
 void protocoloNoche(){
-    ADCON1 = 0x0F; /* this makes all pins as a digital I/O pins */
-    PORT_Dir = 1; /* set as input port */
+    ADCON1 = 0x0F; /* @param this makes all pins as a digital I/O pins */
+    PORT_Dir = 1; /* @param set as input port */
     PORT_Dir2 = 1;
     PORT_Dir3 = 1;
-    LED_Dir = 0; /* set as output port */
+    LED_Dir = 0; /* @param set as output port */
     LED_Dir2 = 0;
     LED_Dir3 = 0;
-    LED2 = 0; /* initially turned OFF LED */
+    LED2 = 0; /* @param initially turned OFF LED */
     LED3 = 0;
     LED4 = 0;
     

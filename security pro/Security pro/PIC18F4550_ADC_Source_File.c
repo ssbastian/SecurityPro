@@ -15,7 +15,10 @@ void ADC_Init()
     ADRESH = 0;           /*Flush ADC output Register*/
     ADRESL = 0;   
 }
-
+/**
+   * conversor ADC.
+   * .
+   */
 int ADC_Read(int channel)
 {
     int digital;

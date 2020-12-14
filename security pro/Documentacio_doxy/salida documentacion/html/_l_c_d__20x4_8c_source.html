@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>security_pro: Fichero Fuente C:/Users/Sebastian/Documents/SecurityPro/security pro/Security pro/LCD_20x4.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="casa.ico"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">security_pro
+   &#160;<span id="projectnumber">8</span>
+   </div>
+   <div id="projectbrief">documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f396504afdc959660871b003fa10164d.html">Documents</a></li><li class="navelem"><a class="el" href="dir_4ac7287d3f20d8f5bb5c92118c15226e.html">SecurityPro</a></li><li class="navelem"><a class="el" href="dir_6023717f2d981da88b930b65ed6faa14.html">security pro</a></li><li class="navelem"><a class="el" href="dir_5598829ea485e7fd1362dd8c6fc11eea.html">Security pro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LCD_20x4.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_l_c_d__20x4_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*@class LCD_iNIT</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;xc.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_l_c_d__20x4___header___file_8h.html">LCD_20x4_Header_File.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/****************************Functions********************************/</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#ad484cc22a9a6bec640097f26d9b35722">   13</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#ad484cc22a9a6bec640097f26d9b35722">LCD_Init</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#a2ba5a2a7121f3698a3126a62db1ab683">LCD_Command_Dir</a> = 0;        <span class="comment">/* @param Make LCD command port direction as o/p */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#afd1d7aa9573cc621f34ecd4eded67cd0">LCD_Data_Dir</a> = 0;                           <span class="comment">/* @param Make LCD data port direction as o/p */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a>(20);                                    <span class="comment">/* @param LCD power up time to get things ready, it should always &gt;15ms */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a> (0x38);                             <span class="comment">/* @param Initialize 16X2 LCD in 8bit mode */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a> (0x0C);                             <span class="comment">/* @param Display ON, Cursor OFF command */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a> (0x06);                             <span class="comment">/* @param Auto Increment cursor */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a> (0x01);                             <span class="comment">/* @param Clear LCD command */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a>(3);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a> (0x80);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#a90345f8c5c020b301b7cc585237485b9">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#a90345f8c5c020b301b7cc585237485b9">LCD_Clear</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a> (0x01);                             <span class="comment">/* @param Clear LCD command */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a>(3);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//        LCD_Command (0x80);                               /* @param 8 is for first line and 0 is for 0th position */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//        MSdelay(1);</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#a0acae103544afa9ae2609871ad8bb196">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a>(<span class="keywordtype">char</span> cmd )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#abefea06b8c7a25ea8f44c41945bf3949">LCD_Data_Port</a> = cmd;                            <span class="comment">/* @param Write command data to LCD data port */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#af8903d8eea3868940c60af887473b152">RS</a> = 0;                                         <span class="comment">/* @param Make RS LOW (command reg.), RW LOW (Write) */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//RW = 0;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#a22e6626f2c98ed902f8ded47f6438c05">EN</a> = 1;                 <span class="comment">/* @param High to Low transition on EN (Enable) */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    NOP();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#a22e6626f2c98ed902f8ded47f6438c05">EN</a> = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a>(3); </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#affd757c37bc3919d2abc8c66ebf46fd4">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#adf43ce9d16ca7b9394f5bc109221dcf4">LCD_Char</a>(<span class="keywordtype">char</span> char_data)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#abefea06b8c7a25ea8f44c41945bf3949">LCD_Data_Port</a> = char_data;                      <span class="comment">/* @param Write data to LCD data port */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#af8903d8eea3868940c60af887473b152">RS</a> = 1;                                         <span class="comment">/* @param Make RS LOW (command reg.), RW LOW (Write) */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//RW = 0;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#a22e6626f2c98ed902f8ded47f6438c05">EN</a> = 1;                 <span class="comment">/* @param High to Low transition on EN (Enable) */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    NOP();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="_l_c_d__20x4___h__file_8h.html#a22e6626f2c98ed902f8ded47f6438c05">EN</a> = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a>(3);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#a22f0a1e06eef47597408d0b782fa49f6">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#ae82669e730dd8cd249730db12f4de7c4">LCD_String</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *msg)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">while</span>((*msg)!=0)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {       </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="_l_c_d__20x4_8c.html#adf43ce9d16ca7b9394f5bc109221dcf4">LCD_Char</a>(*msg);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      msg++;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#afedff6ea961e4641984f319129e3a1d4">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#a46cc42a96c9ea1076385205e032406aa">LCD_String_xy</a>(<span class="keywordtype">char</span> row,<span class="keywordtype">char</span> pos,<span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (row == 1)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a>((pos &amp; 0x0F)|0x80);             <span class="comment">/* @param Command of first row and required position&lt;16 */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row == 2)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a>((pos &amp; 0x0F)|0xC0);             <span class="comment">/* @param Command of Second row and required position&lt;16 */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row == 3)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a>((pos &amp; 0x0F)|0x94);             <span class="comment">/* @param Command of Third row and required position&lt;16 */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row == 4)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a>((pos &amp; 0x0F)|0xD4);             <span class="comment">/* @param Command of Fourth row and required position&lt;16 */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="_l_c_d__20x4_8c.html#ae82669e730dd8cd249730db12f4de7c4">LCD_String</a>(str);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#a6e5c72963efdd48dd7fc0b77c58c1ee2">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#a6e5c72963efdd48dd7fc0b77c58c1ee2">LCD_Custom_Char</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> loc,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *msg)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span>(loc&lt;8)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;     <a class="code" href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a>(0x40+(loc*8));     <span class="comment">/* @param Command 0x40 and onwards forces the device to point CGRAM address */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;       <span class="keywordflow">for</span>(i=0;i&lt;8;i++)             <span class="comment">/* @param Write 8 byte for generation of 1 character */</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;           <a class="code" href="_l_c_d__20x4_8c.html#adf43ce9d16ca7b9394f5bc109221dcf4">LCD_Char</a>(msg[i]);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }   </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">/*********************************Delay Function********************************/</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="_l_c_d__20x4___header___file_8h.html#ab4547814cd401728927a58fbe76ca173">  119</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> val)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i,j;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">for</span>(i=0;i&lt;=val;i++)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">for</span>(j=0;j&lt;165;j++);      <span class="comment">/*@param This count Provide delay of 1 ms for 8MHz Frequency */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">//void eeprom_writex(int address, char data)</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//    EEADR = address;      //  1.Escribir la dirección de la memoria en el registro EEADR</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//    EEDATA = data;          //  2.    Escribir el dato a guardar en el registro EEDAT</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//    EECON1bits.EEPGD = 0; //  3.  Acceder a la memoria de datos de la EEPROM</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//    EECON1bits.CFGS = 0;  //  4.  Acceder a la EEPROM</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//    EECON1bits.WREN = 1;  //  5.  Habilitar escritura</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//    INTCONbits.GIE = 0;     //  6.    Deshabilitar interrupciones</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">//    </span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//    //  7.  Enviar secuencia EECON2 = 0x55 y EECON2 = 0xAA y </span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">//    //      empezar la escritura en la memoria EEPROM</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">//    EECON2 = 0x55;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">//    EECON2 = 0xaa;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">//    EECON1bits.WR = 1;          // Bit que empieza la escritura en la memoria</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">//    </span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//    INTCONbits.GIE = 1;         //  8.    Habilitar interrupciones</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//    while (EECON1bits.WR);      // 9. Esperar hasta que la escritura se complete </span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//char eeprom_readx(int address)</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">//    EEADR = address;        //  1.    Escribir la dirección de la memoria a leer en el registro EEADR  </span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">//    EECON1bits.EEPGD = 0; //  2.  Acceder a la memoria de datos de la EEPROM</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">//    EECON1bits.CFGS = 0;  //  3.  Acceder a la EEPROM</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">//    EECON1bits.RD = 1;      //  4.    Leer datos de la EEPROM</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">//    return(EEDATA);</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">//}</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_l_c_d__20x4___h__file_8h_html_a2ba5a2a7121f3698a3126a62db1ab683"><div class="ttname"><a href="_l_c_d__20x4___h__file_8h.html#a2ba5a2a7121f3698a3126a62db1ab683">LCD_Command_Dir</a></div><div class="ttdeci">#define LCD_Command_Dir</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4___h__file_8h_source.html#l00013">LCD_20x4_H_file.h:13</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4___h__file_8h_html_a22e6626f2c98ed902f8ded47f6438c05"><div class="ttname"><a href="_l_c_d__20x4___h__file_8h.html#a22e6626f2c98ed902f8ded47f6438c05">EN</a></div><div class="ttdeci">#define EN</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4___h__file_8h_source.html#l00016">LCD_20x4_H_file.h:16</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_ad484cc22a9a6bec640097f26d9b35722"><div class="ttname"><a href="_l_c_d__20x4_8c.html#ad484cc22a9a6bec640097f26d9b35722">LCD_Init</a></div><div class="ttdeci">void LCD_Init()</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00013">LCD_20x4.c:13</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4___h__file_8h_html_abefea06b8c7a25ea8f44c41945bf3949"><div class="ttname"><a href="_l_c_d__20x4___h__file_8h.html#abefea06b8c7a25ea8f44c41945bf3949">LCD_Data_Port</a></div><div class="ttdeci">#define LCD_Data_Port</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4___h__file_8h_source.html#l00014">LCD_20x4_H_file.h:14</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_a90345f8c5c020b301b7cc585237485b9"><div class="ttname"><a href="_l_c_d__20x4_8c.html#a90345f8c5c020b301b7cc585237485b9">LCD_Clear</a></div><div class="ttdeci">void LCD_Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00031">LCD_20x4.c:31</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4___h__file_8h_html_af8903d8eea3868940c60af887473b152"><div class="ttname"><a href="_l_c_d__20x4___h__file_8h.html#af8903d8eea3868940c60af887473b152">RS</a></div><div class="ttdeci">#define RS</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4___h__file_8h_source.html#l00018">LCD_20x4_H_file.h:18</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_adf43ce9d16ca7b9394f5bc109221dcf4"><div class="ttname"><a href="_l_c_d__20x4_8c.html#adf43ce9d16ca7b9394f5bc109221dcf4">LCD_Char</a></div><div class="ttdeci">void LCD_Char(char char_data)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00057">LCD_20x4.c:57</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_add81c609b8f23ffa5eb45774bc49b88e"><div class="ttname"><a href="_l_c_d__20x4_8c.html#add81c609b8f23ffa5eb45774bc49b88e">MSdelay</a></div><div class="ttdeci">void MSdelay(unsigned int val)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00119">LCD_20x4.c:119</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_a6e5c72963efdd48dd7fc0b77c58c1ee2"><div class="ttname"><a href="_l_c_d__20x4_8c.html#a6e5c72963efdd48dd7fc0b77c58c1ee2">LCD_Custom_Char</a></div><div class="ttdeci">void LCD_Custom_Char(unsigned char loc, unsigned char *msg)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00102">LCD_20x4.c:102</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_aaf2faa30943637e2d89ae27e01474675"><div class="ttname"><a href="_l_c_d__20x4_8c.html#aaf2faa30943637e2d89ae27e01474675">LCD_Command</a></div><div class="ttdeci">void LCD_Command(char cmd)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00043">LCD_20x4.c:43</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4___h__file_8h_html_afd1d7aa9573cc621f34ecd4eded67cd0"><div class="ttname"><a href="_l_c_d__20x4___h__file_8h.html#afd1d7aa9573cc621f34ecd4eded67cd0">LCD_Data_Dir</a></div><div class="ttdeci">#define LCD_Data_Dir</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4___h__file_8h_source.html#l00012">LCD_20x4_H_file.h:12</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_a46cc42a96c9ea1076385205e032406aa"><div class="ttname"><a href="_l_c_d__20x4_8c.html#a46cc42a96c9ea1076385205e032406aa">LCD_String_xy</a></div><div class="ttdeci">void LCD_String_xy(char row, char pos, const char *str)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00085">LCD_20x4.c:85</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4___header___file_8h_html"><div class="ttname"><a href="_l_c_d__20x4___header___file_8h.html">LCD_20x4_Header_File.h</a></div></div>
+<div class="ttc" id="a_l_c_d__20x4_8c_html_ae82669e730dd8cd249730db12f4de7c4"><div class="ttname"><a href="_l_c_d__20x4_8c.html#ae82669e730dd8cd249730db12f4de7c4">LCD_String</a></div><div class="ttdeci">void LCD_String(const char *msg)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__20x4_8c_source.html#l00072">LCD_20x4.c:72</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

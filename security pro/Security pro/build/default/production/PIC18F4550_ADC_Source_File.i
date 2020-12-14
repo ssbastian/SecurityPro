@@ -5724,6 +5724,9 @@ void ADC_Init()
     ADRESL = 0;
 }
 
+
+
+
 int ADC_Read(int channel)
 {
     int digital;
